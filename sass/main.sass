@@ -1,0 +1,74 @@
+@import nullifying
+@import header
+@import info-ball
+@import button-shevron
+@import charger-slider
+@import hockey-sticks
+@import main-info
+@import running-lines
+@import footer
+
+@import "https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+
+html, body
+	background-color: #F5F5F5
+	font-family: 'Raleway', sans-serif
+	// height: 100vh
+	// width: 100vw
+	overflow-x: hidden
+
+.in-catalog
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: absolute
+	width: 150px
+	height: 150px
+	left: 73%
+	top: 168px
+	background: #FFFFFF
+	border-radius: 50%
+	z-index: 1
+
+	&_text
+		width: 75px
+		height: 20px
+		font-family: 'Raleway'
+		font-weight: 600
+		font-size: 16px
+		line-height: 20px
+		color: #333333
+		transform: rotate(15deg)
+
+		&:hover
+			color: #000
+
+.red-ball
+	position: absolute
+	top: 181px
+	left: 15%
+	width: 674px
+	height: 634px
+	background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
+	filter: blur(32px)
+
+.blue-ball
+	position: absolute
+	top: 108px
+	left: 44%
+	width: 878px
+	height: 645px
+	background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%)
+	filter: blur(32px)
+
+
+
+
+// .second-block
+// 	height: 906px
+
+
+
+
+
