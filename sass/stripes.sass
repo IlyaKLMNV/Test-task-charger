@@ -1,0 +1,84 @@
+.stripes
+	position: absolute
+	text-transform: uppercase
+	top: 735px
+	font-size: 18px
+	line-height: 22px
+	&_blue
+		padding-right: 20px 
+		margin-left: -10px
+		position: relative
+		width: 100vw
+		height: 60px
+		background: #0178F3
+		transform: rotate(5.09deg)
+		color: #F5F5F5
+		z-index: 2
+		
+		&__sentence1
+			position: absolute
+			width: 100vw
+			height: 60px
+			display: flex
+			align-items: center
+			justify-content: space-around
+			animation: 10s linear infinite stripe1
+		&__sentence2
+			position: absolute
+			width: 100vw
+			height: 60px
+			display: flex
+			align-items: center
+			justify-content: space-around
+			transform: translate(-100vw, 0px)
+			animation: 10s linear infinite stripe2
+			
+			
+			
+	&_white
+		padding-right: 20px 
+		margin-left: -10px
+		position: relative	
+		width: 100vw
+		height: 60px
+		background: #F5F5F5
+		transform: translate(0vw, -61px) rotate(-2.51deg)
+		display: flex
+		align-items: center
+		justify-content: space-around
+		border: 1px solid #333333
+		color: #333333
+		z-index: 1
+
+		&__sentence1
+			position: absolute
+			width: 100vw
+			height: 60px
+			display: flex
+			align-items: center
+			justify-content: space-around
+			animation: 10s linear infinite stripe1
+
+		&__sentence2
+			position: absolute
+			width: 100vw
+			height: 60px
+			display: flex
+			align-items: center
+			justify-content: space-around
+			transform: translate(-100vw, 0px)
+			animation: 10s linear infinite stripe2
+
+	
+
+// @keyframes stripe1
+	0%
+
+	100%
+		transform: translate(100vw, 0vw)
+
+// @keyframes stripe2
+	0% 
+
+	100%
+		transform: translate(0vw, 0vw)

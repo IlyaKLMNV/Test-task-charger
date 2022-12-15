@@ -1,72 +1,77 @@
 .hockey-sticks
-	border: 1px solid #000000
-	padding-top: 103px
-	// width: 1218px
-	// height: 415px
+	width: 1218px
 	margin: 0 auto
 	color: #333333
-	h1
-		font-weight: 700
-		font-size: 48px
-		// line-height: 52px
-	&_sticks
-		border: 1px solid #000000
+
+	&_nav
 		display: flex
 		justify-content: space-between
-		padding-top: 43px
-		.stick
+		margin-bottom: 40px
+
+		>div
+			display: flex
+		.button-shevron
+			position: static
+
+	h3
+		font-weight: 700
+		font-size: 48px
+		line-height: 52px
+
+	&_sticks
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		column-gap: 30px
+		&__stick
 			display: flex
 			flex-direction: column
-			padding-bottom: 16px
 			>img
-				// height: 282px
-				// width: 271px
+				height: 282px
+				width: 271px
 			p
-				font-weight: 400
 				font-size: 18px
 				line-height: 24px
-				color: #333333
-			.price
-				padding-top: 8px
-				margin-bottom: 24px
-				font-weight: 700
-				font-size: 18px
-				line-height: 22px
+
+.price
+	padding-top: 8px
+	margin-bottom: 24px
+	font-weight: 700
+	font-size: 18px
+	line-height: 22px
 
 .buttons-more-statistics
 	display: flex
-
-	&_button-statisics
-		border: 1px solid #BCBCBC
-		
-		border-radius: 30px 0px 0px 30px
-		width: 64px
+	.button-shevron
+		position: static
 		height: 50px
-		display: flex
-		flex-direction: row
-		justify-content: center
-		align-items: center
-		margin-right: 10px
-		&:hover
-			border: 1px solid #333333
-		img
-			// height: 17px
-			// width: 18px
-	&_button-more
-		position: relative
-		width: 207px
-		height: 50px
-		border: 1px solid #BCBCBC
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: flex-start
-		padding: 14px 24px
-		border-radius: 0px 30px 30px 0px
-		span
-			position: absolute
-			top: 19px
-			left: 172px
-
-		&:hover
-			border: 1px solid #333333
+		&__left
+			min-width: 64px
+			align-items: center
+			justify-content: center
+			margin-right: 10px
+			div
+				width: 26px
+				height: 26px
+				background-image: url("../img/hockey-sticks/statistics.svg")
+				transform: rotate(0)
+		&__right
+			width: 207px
+			// margin-left: 10px
+			justify-content: center
+			> div
+				display: flex
+				justify-content: space-between
+				align-items: center
+				background-image: none
+				width: 159px
+				height: 22px
+				p
+					font-weight: 600
+					font-size: 16px
+					line-height: 20px
+				div
+					background-image: url("../img/hockey-sticks/shevron.svg")
+					background-size: contain
+					background-repeat: no-repeat
+					width: 16px
+					height: 16px

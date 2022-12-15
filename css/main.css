@@ -169,18 +169,100 @@ a:hover {
   background-image: url("../img/header/shopping-cart.svg");
 }
 
+.info-ball {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.in-catalog {
+  left: 73vw;
+  top: 168px;
+  z-index: 1;
+}
+.in-catalog:hover {
+  -webkit-box-shadow: 0px 0px 10px #ffffff;
+          box-shadow: 0px 0px 10px #ffffff;
+}
+.in-catalog_text {
+  width: 75px;
+  height: 20px;
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+.do-test {
+  left: 67vw;
+  top: 657px;
+}
+.do-test_text {
+  color: #333333;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.do-test:hover {
+  -webkit-box-shadow: 0px 0px 10px #ffffff;
+          box-shadow: 0px 0px 10px #ffffff;
+}
+
+.more-about-company {
+  border: 1px solid #F64F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F64F00;
+}
+.more-about-company_text {
+  width: 91px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.more-about-company:hover {
+  -webkit-box-shadow: 0px 0px 10px #000000;
+          box-shadow: 0px 0px 10px #000000;
+}
+
 .button-shevron {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: 78px;
   height: 58px;
   border: 1px solid rgba(125, 125, 125, 0.8);
   z-index: 2;
 }
+.button-shevron:hover {
+  border: 1px solid black;
+}
 .button-shevron__left {
-  border: 1px solid #fff;
-  left: 18%;
   border-radius: 30px 0px 0px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,7 +274,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.button-shevron__left div {
+.button-shevron__left > div {
   width: 18px;
   height: 18px;
   -webkit-transform: rotate(180deg);
@@ -202,8 +284,6 @@ a:hover {
   background-repeat: no-repeat;
 }
 .button-shevron__right {
-  border: 1px solid #fff;
-  right: 18%;
   border-radius: 0px 30px 30px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,7 +295,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.button-shevron__right div {
+.button-shevron__right > div {
   width: 18px;
   height: 18px;
   background-image: url("../img/charger-slider/shevron.svg");
@@ -227,23 +307,31 @@ a:hover {
   height: 910px;
   background-color: #131111;
   padding-top: 40px;
+  margin-bottom: 103px;
 }
-
-.charger {
+.charger-slider_charger {
   width: 1096px;
   height: 117px;
   margin: 0 auto 22px;
 }
-.charger img {
+.charger-slider_charger img {
   width: 100%;
   height: 100%;
 }
-
-.slider {
+.charger-slider_slider {
   position: relative;
   display: block;
 }
-.slider_cards {
+.charger-slider_slider > .button-shevron {
+  top: 50%;
+}
+.charger-slider_slider > .button-shevron__left {
+  left: 18%;
+}
+.charger-slider_slider > .button-shevron__right {
+  right: 18%;
+}
+.charger-slider_slider__cards {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,7 +339,7 @@ a:hover {
   -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
-.slider_card {
+.charger-slider_slider__card {
   position: relative;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -262,7 +350,7 @@ a:hover {
   transition: all 0.3s ease;
   border-radius: 100px 0px;
 }
-.slider_card--active {
+.charger-slider_slider__card--active {
   opacity: 1;
 }
 
@@ -320,7 +408,7 @@ a:hover {
   position: absolute;
   width: 27px;
   height: 27px;
-  background: url(../img/play.svg);
+  background: url(../img/info-ball/play.svg);
   background-size: cover;
 }
 .rolling-inscription_text {
@@ -364,26 +452,42 @@ a:hover {
   }
 }
 .hockey-sticks {
-  border: 1px solid #000000;
-  padding-top: 103px;
+  width: 1218px;
   margin: 0 auto;
   color: #333333;
 }
-.hockey-sticks h1 {
-  font-weight: 700;
-  font-size: 48px;
-}
-.hockey-sticks_sticks {
-  border: 1px solid #000000;
+.hockey-sticks_nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 43px;
+  margin-bottom: 40px;
 }
-.hockey-sticks_sticks .stick {
+.hockey-sticks_nav > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hockey-sticks_nav .button-shevron {
+  position: static;
+}
+.hockey-sticks h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+}
+.hockey-sticks_sticks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+}
+.hockey-sticks_sticks__stick {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,15 +495,17 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 16px;
 }
-.hockey-sticks_sticks .stick p {
-  font-weight: 400;
+.hockey-sticks_sticks__stick > img {
+  height: 282px;
+  width: 271px;
+}
+.hockey-sticks_sticks__stick p {
   font-size: 18px;
   line-height: 24px;
-  color: #333333;
 }
-.hockey-sticks_sticks .stick .price {
+
+.price {
   padding-top: 8px;
   margin-bottom: 24px;
   font-weight: 700;
@@ -412,121 +518,276 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
 }
-.buttons-more-statistics_button-statisics {
-  border: 1px solid #BCBCBC;
-  border-radius: 30px 0px 0px 30px;
-  width: 64px;
+.buttons-more-statistics .button-shevron {
+  position: static;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+.buttons-more-statistics .button-shevron__left {
+  min-width: 64px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 10px;
-}
-.buttons-more-statistics_button-statisics:hover {
-  border: 1px solid #333333;
-}
-.buttons-more-statistics_button-more {
-  position: relative;
-  width: 207px;
-  height: 50px;
-  border: 1px solid #BCBCBC;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 14px 24px;
-  border-radius: 0px 30px 30px 0px;
+  margin-right: 10px;
 }
-.buttons-more-statistics_button-more span {
+.buttons-more-statistics .button-shevron__left div {
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/hockey-sticks/statistics.svg");
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+.buttons-more-statistics .button-shevron__right {
+  width: 207px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.buttons-more-statistics .button-shevron__right > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: none;
+  width: 159px;
+  height: 22px;
+}
+.buttons-more-statistics .button-shevron__right > div p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.buttons-more-statistics .button-shevron__right > div div {
+  background-image: url("../img/hockey-sticks/shevron.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+.main-info {
+  position: relative;
+  background-color: #131111;
+  height: 3230px;
+}
+.main-info_ideal-hockey-stick {
+  height: 971px;
+  padding-top: 100px;
+}
+.main-info_ideal-hockey-stick > .charger {
   position: absolute;
-  top: 19px;
-  left: 172px;
+  width: 1218px;
+  height: 130px;
+  margin: 0 auto;
+  top: 505px;
+  left: 0;
+  right: 0;
 }
-.buttons-more-statistics_button-more:hover {
+.main-info_ideal-hockey-stick__text h3 {
+  width: 630px;
+  margin: 0 auto 24px;
+  color: #F5F5F5;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  text-align: center;
+}
+.main-info_ideal-hockey-stick__text h4 {
+  width: 546px;
+  height: 24px;
+  margin: 0 auto 55px;
+  color: #D8D8D8;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-info_ideal-hockey-stick > img {
+  position: absolute;
+  top: 307px;
+  left: 20vw;
+  width: 1048px;
+  height: 741px;
+}
+.main-info_about-brand {
+  height: 1323px;
+  margin-top: 705px;
+  margin-left: 190px;
+  background: #F5F5F5;
+  border-radius: 100px 0px 0px 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 134px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 134px;
+     -moz-column-gap: 134px;
+          column-gap: 134px;
+  color: #333333;
+}
+.main-info_about-brand__text {
+  width: 491px;
+  padding-top: 100px;
+  margin-left: 160px;
+}
+.main-info_about-brand__text > h3 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 24px;
+}
+.main-info_about-brand__text > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+.main-info_about-brand__flex {
+  width: 594px;
+  padding-top: 179px;
+}
+.main-info_about-brand__flex > h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+.main-info_about-brand__flex > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
+.main-info_about-brand__flex > img {
+  margin-bottom: 54px;
+}
+
+.stripes {
+  position: absolute;
+  text-transform: uppercase;
+  top: 735px;
+  font-size: 18px;
+  line-height: 22px;
+}
+.stripes_blue {
+  padding-right: 20px;
+  margin-left: -10px;
+  position: relative;
+  width: 100vw;
+  height: 60px;
+  background: #0178F3;
+  -webkit-transform: rotate(5.09deg);
+          transform: rotate(5.09deg);
+  color: #F5F5F5;
+  z-index: 2;
+}
+.stripes_blue__sentence1 {
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-animation: 10s linear infinite stripe1;
+          animation: 10s linear infinite stripe1;
+}
+.stripes_blue__sentence2 {
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translate(-100vw, 0px);
+          transform: translate(-100vw, 0px);
+  -webkit-animation: 10s linear infinite stripe2;
+          animation: 10s linear infinite stripe2;
+}
+.stripes_white {
+  padding-right: 20px;
+  margin-left: -10px;
+  position: relative;
+  width: 100vw;
+  height: 60px;
+  background: #F5F5F5;
+  -webkit-transform: translate(0vw, -61px) rotate(-2.51deg);
+          transform: translate(0vw, -61px) rotate(-2.51deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   border: 1px solid #333333;
+  color: #333333;
+  z-index: 1;
+}
+.stripes_white__sentence1 {
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-animation: 10s linear infinite stripe1;
+          animation: 10s linear infinite stripe1;
+}
+.stripes_white__sentence2 {
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transform: translate(-100vw, 0px);
+          transform: translate(-100vw, 0px);
+  -webkit-animation: 10s linear infinite stripe2;
+          animation: 10s linear infinite stripe2;
+}
+
+footer {
+  height: 671px;
 }
 
 html, body {
   background-color: #F5F5F5;
   font-family: "Raleway", sans-serif;
+  background: #F5F5F5;
   overflow-x: hidden;
 }
 
-.in-catalog {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 73%;
-  top: 168px;
-  background: #FFFFFF;
-  border-radius: 50%;
-  z-index: 1;
-}
-.in-catalog_text {
-  width: 75px;
-  height: 20px;
-  font-family: "Raleway";
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #333333;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
-}
-.in-catalog_text:hover {
-  color: #000;
+a {
+  cursor: pointer;
 }
 
-.red-ball {
-  position: absolute;
-  top: 181px;
-  left: 15%;
-  width: 674px;
-  height: 634px;
-  background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%);
-  -webkit-filter: blur(32px);
-          filter: blur(32px);
-}
-
-.blue-ball {
-  position: absolute;
-  top: 108px;
-  left: 44%;
-  width: 878px;
-  height: 645px;
-  background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%);
-  -webkit-filter: blur(32px);
-          filter: blur(32px);
+.hockey-sticks-with-stripes {
+  height: 866px;
+  position: relative;
 }

@@ -3,8 +3,8 @@ class Slider {
     this.counter = 0;
 
     this.element = element;
-    this.sliderCards = this.element.getElementsByClassName('slider_cards')[0];
-    this.cards = this.element.getElementsByClassName('slider_card');
+    this.sliderCards = this.element.getElementsByClassName('charger-slider_slider__cards')[0];
+    this.cards = this.element.getElementsByClassName('charger-slider_slider__card');
     this.cardsLength = this.cards.length;
     this.leftArrow = this.element.getElementsByClassName('button-shevron__left')[0];
     this.rightArrow = this.element.getElementsByClassName('button-shevron__right')[0];
@@ -45,7 +45,8 @@ class Slider {
     this.moveActiveToCenter();
   }
   setActiveClass(method) {
-    this.cards[this.counter].classList[method]('slider_card--active');
+    this.cards[this.counter].classList[method]('charger-slider_slider__card--active');
+    // this.cards[this.counter].classList[method]('review--active');
   }
   
   moveActiveToCenter = () => {
