@@ -6,7 +6,6 @@
 
 	&_ideal-hockey-stick
 		height: 971px
-		padding-top: 100px
 		
 		> .charger
 			position: absolute
@@ -47,7 +46,7 @@
 	
 	&_about-brand
 		height: 1323px
-		margin-top: 705px
+		// margin-top: 705px
 		margin-left: 190px
 		background: #F5F5F5
 		border-radius: 100px 0px 0px 100px
@@ -93,7 +92,53 @@
 			> img
 				margin-bottom: 54px
 
-			
+	&_discount
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		column-gap: 271px
+		padding-top: 117px
+
+		&__text
+			width: 662px
+			margin-left: 350px
+
+			> h3
+				font-weight: 700
+				font-size: 90px
+				line-height: 104px
+				color: #131111
+				// -webkit-text-stroke: 1px #BCBCBC
+				text-shadow: 1px 0px 2px #BCBCBC, 0px 1px 2px #BCBCBC, -1px 0px 2px #BCBCBC,	0px -1px 2px #BCBCBC, 
+				margin-bottom: 40px
+
+				span:nth-child(1)
+					border: 1px solid #fff
+					background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%)
+					// filter: blur(32px)
+				span:nth-child(3)
+					border: 1px solid #fff
+					background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
+					// filter: blur(32px)
+				
+
+				span:nth-child(4)
+					color: #fff
+					text-shadow: none
+			> p
+				font-weight: 400
+				font-size: 18px
+				line-height: 24px
+				color: #BCBCBC
+				margin-bottom: 32px
+
+			> input
+				margin-bottom: 56px
+
+		&__circle
+			background-image: url("../img/main-info/hockey_player_circle.png")
+			background-repeat: no-repeat
+
+
 
 
 

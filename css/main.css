@@ -251,6 +251,32 @@ a:hover {
           box-shadow: 0px 0px 10px #000000;
 }
 
+.discount {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333333;
+  background: #FFFFFF;
+}
+.discount_text {
+  width: 102px;
+  height: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.discount:hover {
+  -webkit-box-shadow: 0px 0px 10px #ffffff;
+          box-shadow: 0px 0px 10px #ffffff;
+}
+
 .button-shevron {
   cursor: pointer;
   position: absolute;
@@ -579,7 +605,6 @@ a:hover {
 }
 .main-info_ideal-hockey-stick {
   height: 971px;
-  padding-top: 100px;
 }
 .main-info_ideal-hockey-stick > .charger {
   position: absolute;
@@ -617,7 +642,6 @@ a:hover {
 }
 .main-info_about-brand {
   height: 1323px;
-  margin-top: 705px;
   margin-left: 190px;
   background: #F5F5F5;
   border-radius: 100px 0px 0px 100px;
@@ -665,6 +689,54 @@ a:hover {
 }
 .main-info_about-brand__flex > img {
   margin-bottom: 54px;
+}
+.main-info_discount {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 271px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 271px;
+     -moz-column-gap: 271px;
+          column-gap: 271px;
+  padding-top: 117px;
+}
+.main-info_discount__text {
+  width: 662px;
+  margin-left: 350px;
+}
+.main-info_discount__text > h3 {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 104px;
+  color: #131111;
+  text-shadow: 1px 0px 2px #BCBCBC, 0px 1px 2px #BCBCBC, -1px 0px 2px #BCBCBC, 0px -1px 2px #BCBCBC;
+  margin-bottom: 40px;
+}
+.main-info_discount__text > h3 span:nth-child(1) {
+  border: 1px solid #fff;
+  background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%);
+}
+.main-info_discount__text > h3 span:nth-child(3) {
+  border: 1px solid #fff;
+  background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%);
+}
+.main-info_discount__text > h3 span:nth-child(4) {
+  color: #fff;
+  text-shadow: none;
+}
+.main-info_discount__text > p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #BCBCBC;
+  margin-bottom: 32px;
+}
+.main-info_discount__text > input {
+  margin-bottom: 56px;
+}
+.main-info_discount__circle {
+  background-image: url("../img/main-info/hockey_player_circle.png");
+  background-repeat: no-repeat;
 }
 
 .stripes {
