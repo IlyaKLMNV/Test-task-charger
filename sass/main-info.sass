@@ -3,7 +3,6 @@
 	background-color: #131111
 	height: 3230px
 
-
 	&_ideal-hockey-stick
 		height: 971px
 		
@@ -18,7 +17,7 @@
 			right: 0
 			
 		&__text
-
+			padding-top: 100px
 			h3
 				width: 630px
 				margin: 0 auto 24px
@@ -93,6 +92,7 @@
 				margin-bottom: 54px
 
 	&_discount
+		position: relative
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
 		column-gap: 271px
@@ -101,6 +101,7 @@
 		&__text
 			width: 662px
 			margin-left: 350px
+			
 
 			> h3
 				font-weight: 700
@@ -110,16 +111,6 @@
 				// -webkit-text-stroke: 1px #BCBCBC
 				text-shadow: 1px 0px 2px #BCBCBC, 0px 1px 2px #BCBCBC, -1px 0px 2px #BCBCBC,	0px -1px 2px #BCBCBC, 
 				margin-bottom: 40px
-
-				span:nth-child(1)
-					border: 1px solid #fff
-					background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%)
-					// filter: blur(32px)
-				span:nth-child(3)
-					border: 1px solid #fff
-					background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
-					// filter: blur(32px)
-				
 
 				span:nth-child(4)
 					color: #fff
@@ -132,15 +123,103 @@
 				margin-bottom: 32px
 
 			> input
-				margin-bottom: 56px
+				
+				color: #7D7D7D
 
 		&__circle
-			background-image: url("../img/main-info/hockey_player_circle.png")
-			background-repeat: no-repeat
+			border: 1px solid #333333
+			border-radius: 50%
+			width: 736px
+			height: 736px
+			display: flex
+			align-items: center
+			justify-content: center
+			
+			&_hidden
+				border-radius: 50%
+				overflow: hidden
+				width: 655px
+				height: 655px
+				> div
+					background-image: url("../img/main-info/hockey_player_circle.png")
+					background-size: contain
+					background-repeat: no-repeat
+					// background-position: center center
+					width: 655px
+					height: 655px
 
+.lightning
+	position: relative
+	display: inline-block
+	width: 105px
+	height: 105px
+	transform: translate(-40px, 25px)
+	
+	img
+		position: absolute
+		width: 64px
+		height: 63px
+		margin: auto auto
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
 
+	> div
+		border: 1px solid #d81111
+		position: absolute
+		top: 0
+		left: 0
+		width: 105px
+		height: 105px
+		background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%)
+		filter: blur(32px)
 
+.percent
+	position: relative
+	display: inline-block
+	width: 90px
+	height: 90px
+	margin-right: -20px
+	transform: translate(0px, 20px)
 
+	> img:nth-child(1)
+		position: absolute
+		width: 57px
+		height: 56px
 
+	> img
+		position: absolute
+		width: 22px
+		height: 22px
+		margin: auto auto
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+
+	> div
+		position: absolute
+		top: 0
+		left: 0
+		width: 105px
+		height: 105px
+		background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
+		filter: blur(32px)
+
+.form-group
+	color: #7D7D7D
+	width: 445px
+	font-weight: 400
+	font-size: 16px
+	line-height: 22px
+	margin-bottom: 56px
+	border-bottom: 1px solid #7d7d7d70
+	padding: 0px 0px 10px
+	font-family: inherit
+
+	> input
+		background: transparent
+		color: #fff
 
 

@@ -280,42 +280,46 @@
 				</div>
 			</div>
 
-
 			<div class="main-info_discount">
 				<div class="main-info_discount__text">
 					<h3>
-						Получи <span><img src="img/main-info/lightning.svg" alt="lightning"></span><br>
-						<span><img src="img/main-info/percent.svg" alt="percent"></span>  скидку 
-						<span>500 ₽</span> за подписку
-						
+						Получи
+						<div class="lightning">
+							<img src="img/main-info/lightning.svg" alt="lightning">
+							<div></div>
+						</div>
+						<br>
+						<div class="percent">
+							<img src="img/main-info/star.svg" alt="star"></img>
+							<img src="img/main-info/percent.svg" alt="percent"></img>
+							<div></div>
+						</div>
+						скидку 
+						<span>500 ₽</span>
+						за подписку
 					</h3>
-					
 					<p>
 						Никакого спама и рекламы, только полезная информация, скидки и персональные предложения
 					</p>
-					<input type="text" placeholder="Ваш Email">
-
-
-					<a href="#">
-						<div class="info-ball discount">
-							<div class="discount_text">
-								Подписаться
-							</div>
+					<form id="form">
+						<div class="form-group">
+							<input type="email" name="email"
+							placeholder="Ваш Email">
 						</div>
-					</a>
-
-
+						<div class="info-ball discount">
+							<input class="discount_text" type="submit" value="Подписаться">
+							</input>
+						</div>
+					</form>
 				</div>
 
 				<div class="main-info_discount__circle">
-					
+					<div class="main-info_discount__circle_hidden">
+						<div></div>
+					</div>
 				</div>
-
 			</div>
-
-			
 		</div>
-
 
 		<footer>
 			
