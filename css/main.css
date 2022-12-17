@@ -283,6 +283,34 @@ a:hover {
           box-shadow: 0px 0px 10px #ffffff;
 }
 
+.connect {
+  left: 74%;
+  top: 100px;
+  border: 1px solid #F64F00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #F64F00;
+}
+.connect_text {
+  text-align: center;
+  width: 89px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+.connect:hover {
+  -webkit-box-shadow: 0px 0px 10px #000000;
+          box-shadow: 0px 0px 10px #000000;
+}
+
 .button-shevron {
   cursor: pointer;
   position: absolute;
@@ -952,7 +980,129 @@ a:hover {
 }
 
 footer {
+  padding-top: 100px;
   height: 671px;
+  position: relative;
+}
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .wrapper .container {
+  width: 1186px;
+}
+footer .logo-small-with-icons {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .logo-small-with-icons img {
+  width: 261px;
+  height: 27px;
+}
+footer .logo-small-with-icons .icons {
+  margin-left: 50px;
+  width: 96px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .logo-small-with-icons .icons a:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/footer/tg.svg");
+  background-size: contain;
+}
+footer .logo-small-with-icons .icons a:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/footer/vk.svg");
+  background-size: contain;
+}
+footer .contacts {
+  padding-top: 33px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 167px;
+  -ms-grid-columns: 352px 167px auto;
+  grid-template-columns: 352px auto;
+}
+footer .contacts .thin {
+  color: #BCBCBC;
+  padding-top: 16px;
+  margin-bottom: 4px;
+}
+footer .contacts .bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+footer .contacts_row-requisites a {
+  color: #BCBCBC;
+  text-decoration: underline;
+}
+footer .contacts_row-requisites a:hover {
+  color: #000;
+}
+footer .contacts_row-requisites__sub-columns {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 167px;
+  -ms-grid-columns: 138px 167px 168px;
+  grid-template-columns: 138px 168px;
+}
+footer .contacts_row-requisites__bottom {
+  color: #7D7D7D;
+  padding-top: 68px;
+  padding-bottom: 8px;
+}
+footer .contacts_row-about-company a {
+  display: block;
+  margin-bottom: 16px;
+}
+footer .contacts_row-about-company a:hover {
+  color: #000;
+}
+footer .contacts_row-about-company_columns {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 80px;
+  -ms-grid-columns: 200px 80px 386px;
+  grid-template-columns: 200px 386px;
+}
+footer .contacts_row-about-company_sub-columns {
+  padding-top: 56px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 80px;
+  -ms-grid-columns: 200px 80px 191px 80px 132px;
+  grid-template-columns: 200px 191px 132px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+footer .contacts_row-about-company_sub-columns img {
+  margin-bottom: 16px;
 }
 
 html, body {

@@ -1,2 +1,107 @@
 footer
+	padding-top: 100px
 	height: 671px
+	position: relative
+
+	.wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+
+		.container
+			width: 1186px
+
+	.logo-small-with-icons
+		height: 40px
+		display: flex
+		align-items: center
+
+		img
+			width: 261px
+			height: 27px
+
+		.icons
+			margin-left: 50px
+			width: 96px
+			height: 40px
+			display: flex
+			justify-content: space-between
+
+			a:nth-child(1)
+				width: 40px
+				height: 40px
+				background-image: url("../img/footer/tg.svg")
+				background-size: contain
+				
+			a:nth-child(2)
+				width: 40px
+				height: 40px
+				background-image: url("../img/footer/vk.svg")
+				background-size: contain
+
+	.contacts
+		padding-top: 33px
+		font-weight: 400
+		font-size: 16px
+		line-height: 22px
+		color: #333333
+		display: grid
+		grid-gap: 167px
+		grid-template-columns: 352px auto
+	
+		.thin
+			color: #BCBCBC
+			padding-top: 16px
+			margin-bottom: 4px
+
+		.bold
+				font-weight: 700
+				font-size: 18px
+				line-height: 22px
+				margin-bottom: 24px
+
+		&_row-requisites
+
+			a
+				color: #BCBCBC
+				text-decoration: underline
+				&:hover
+					color: #000
+
+			&__sub-columns
+				display: grid
+				grid-gap: 167px
+				grid-template-columns: 138px 168px
+
+			&__bottom
+				color: #7D7D7D
+				padding-top: 68px
+				padding-bottom: 8px
+
+		&_row-about-company
+			a 
+				display: block
+				margin-bottom: 16px
+					// color: #BCBCBC
+				&:hover
+					color: #000
+
+			&_columns
+				display: grid
+				grid-gap: 80px
+				grid-template-columns: 200px 386px
+
+			&_sub-columns
+				padding-top: 56px
+				display: grid
+				grid-gap: 80px
+				grid-template-columns: 200px 191px 132px
+				align-items: end
+				
+				img
+					margin-bottom: 16px
+
+				
+
+			
+			
