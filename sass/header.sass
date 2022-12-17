@@ -29,63 +29,68 @@ a
 		height: 22px
 		display: flex
 
+// ссылки на другие страницы сайта
 .nav-links
+
 	a
 		margin-left: 24px
 
+// иконки навигации сайта
 .items
 	margin-left: 175px
 	top: 30px
+
 	> a
 		margin-left: 24px
-
-.circle
-	display: none
-	top: -50%
-	left: -45%
-	// top: -13px
-	// left: -14px
-	width: 50px
-	height: 50px
-	position: absolute
-	border: 1px solid #F5F5F5
-	border-radius: 50%
-	// z-index: 1
 
 .header_icons
 	display: flex
 	align-items: center
 	position: relative
+
 	> div
 		width: 26px
 		height: 26px
+
 		> a
 			display: block
 			width: 26px
 			height: 26px
+			
 			&:hover .circle
 				display: block
 
-.loupe
-	background-image: url("../img/header/loupe.svg")
-	position: relative
+	// всплывающая обводка вокруг иконок навигации сайта
+	&__circle
+		display: none
+		top: -50%
+		left: -45%
+		width: 50px
+		height: 50px
+		position: absolute
+		border: 1px solid #F5F5F5
+		border-radius: 50%
 
-.phone
-	margin-left: 16px
-	position: relative
-	background-image: url("../img/header/telephone.svg")
+	&__loupe
+		background-image: url("../img/header/loupe.svg")
+		position: relative
 
-.statistics
-	margin-left: 16px
-	position: relative
-	background-image: url("../img/header/statistics.svg")
+	&__phone
+		margin-left: 16px
+		position: relative
+		background-image: url("../img/header/telephone.svg")
 
-.person
-	margin-left: 16px
-	position: relative
-	background-image: url("../img/header/person.svg")
+	&__statistics
+		margin-left: 16px
+		position: relative
+		background-image: url("../img/header/statistics.svg")
 
-.basket
-	position: relative
-	margin-left: 37px
-	background-image: url("../img/header/shopping-cart.svg")
+	&__person
+		margin-left: 16px
+		position: relative
+		background-image: url("../img/header/person.svg")
+
+	&__basket
+		position: relative
+		margin-left: 37px
+		background-image: url("../img/header/shopping-cart.svg")

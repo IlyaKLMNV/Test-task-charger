@@ -6,7 +6,8 @@
 	&_ideal-hockey-stick
 		height: 971px
 		
-		> .charger
+		// фоновое изображение
+		.charger
 			position: absolute
 			// top: 505px
 			width: 1218px
@@ -18,6 +19,7 @@
 			
 		&__text
 			padding-top: 100px
+
 			h3
 				width: 630px
 				margin: 0 auto 24px
@@ -43,6 +45,7 @@
 			width: 1048px
 			height: 741px
 	
+	// текст с сновной информацией о компании и ее продуктах
 	&_about-brand
 		height: 1323px
 		// margin-top: 705px
@@ -58,15 +61,14 @@
 			width: 491px
 			padding-top: 100px
 			margin-left: 160px
-			
 
-			> h3
+			h3
 				font-weight: 700
 				font-size: 48px
 				line-height: 52px
 				margin-bottom: 24px
 
-			> p
+			p
 				font-weight: 400
 				font-size: 18px
 				line-height: 24px
@@ -76,21 +78,22 @@
 			width: 594px
 			padding-top: 179px
 
-			> h3
+			h3
 				font-weight: 600
 				font-size: 24px
 				line-height: 120%
 				margin-bottom: 16px
 
-			> p
+			p
 				font-weight: 400
 				font-size: 16px
 				line-height: 22px
 				margin-bottom: 40px
 
-			> img
+			img
 				margin-bottom: 54px
 
+	// блок скидки за подписку
 	&_discount
 		position: relative
 		display: grid
@@ -101,9 +104,8 @@
 		&__text
 			width: 662px
 			margin-left: 350px
-			
 
-			> h3
+			h3
 				font-weight: 700
 				font-size: 90px
 				line-height: 104px
@@ -115,17 +117,18 @@
 				span:nth-child(4)
 					color: #fff
 					text-shadow: none
-			> p
+
+			p
 				font-weight: 400
 				font-size: 18px
 				line-height: 24px
 				color: #BCBCBC
 				margin-bottom: 32px
 
-			> input
-				
+			input
 				color: #7D7D7D
 
+		// кнопка "подписаться" в виде круга
 		&__circle
 			border: 1px solid #333333
 			border-radius: 50%
@@ -140,13 +143,15 @@
 				overflow: hidden
 				width: 655px
 				height: 655px
-				> div
+
+				div
 					background-image: url("../img/main-info/hockey_player_circle.png")
 					background-size: contain
 					background-repeat: no-repeat
 					width: 655px
 					height: 655px
 
+// настройка фонового изображения для текста
 .lightning
 	position: relative
 	display: inline-block
@@ -174,6 +179,7 @@
 		background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%)
 		filter: blur(32px)
 
+// настройка фонового изображения для текста
 .percent
 	position: relative
 	display: inline-block
@@ -182,12 +188,12 @@
 	margin-right: -20px
 	transform: translate(0px, 20px)
 
-	> img:nth-child(1)
+	img:nth-child(1)
 		position: absolute
 		width: 57px
 		height: 56px
 
-	> img
+	img
 		position: absolute
 		width: 22px
 		height: 22px
@@ -197,7 +203,7 @@
 		bottom: 0
 		right: 0
 
-	> div
+	div
 		position: absolute
 		top: 0
 		left: 0
@@ -206,6 +212,8 @@
 		background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
 		filter: blur(32px)
 
+
+// поле для ввода почты
 .form-group
 	color: #7D7D7D
 	width: 445px
@@ -217,7 +225,7 @@
 	padding: 0px 0px 10px
 	font-family: inherit
 
-	> input
+	input
 		background: transparent
 		color: #fff
 

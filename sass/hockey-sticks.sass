@@ -1,3 +1,8 @@
+.hockey-sticks-with-stripes
+	height: 866px
+	position: relative
+	
+// слайдер с карточкками товаров
 .hockey-sticks
 	width: 1218px
 	margin: 0 auto
@@ -8,67 +13,82 @@
 		justify-content: space-between
 		margin-bottom: 40px
 
-		>div
+		// кнопки для управления слайдером товаров
+		div
 			display: flex
+
 		.button-shevron
 			position: static
 
+	// заголовок слайдера
 	h3
 		font-weight: 700
 		font-size: 48px
 		line-height: 52px
 
+	// все карточки товаров
 	&_sticks
 		display: grid
 		grid-template-columns: repeat(4, 1fr)
 		column-gap: 30px
+		
+		// карточка товара
 		&__stick
 			display: flex
 			flex-direction: column
-			>img
+
+			&_price
+				padding-top: 8px
+				margin-bottom: 24px
+				font-weight: 700
+				font-size: 18px
+				line-height: 22px
+
+			img
 				height: 282px
 				width: 271px
+
 			p
 				font-size: 18px
 				line-height: 24px
 
-.price
-	padding-top: 8px
-	margin-bottom: 24px
-	font-weight: 700
-	font-size: 18px
-	line-height: 22px
-
+// кнопки на карточке товара
 .buttons-more-statistics
 	display: flex
+
 	.button-shevron
 		position: static
 		height: 50px
+
 		&__left
 			min-width: 64px
 			align-items: center
 			justify-content: center
 			margin-right: 10px
+
 			div
 				width: 26px
 				height: 26px
 				background-image: url("../img/hockey-sticks/statistics.svg")
 				transform: rotate(0)
+
 		&__right
 			width: 207px
-			// margin-left: 10px
 			justify-content: center
-			> div
+
+			div
 				display: flex
 				justify-content: space-between
 				align-items: center
 				background-image: none
 				width: 159px
 				height: 22px
+
 				p
 					font-weight: 600
 					font-size: 16px
 					line-height: 20px
+
 				div
 					background-image: url("../img/hockey-sticks/shevron.svg")
 					background-size: contain

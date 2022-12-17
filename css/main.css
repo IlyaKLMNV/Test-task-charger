@@ -107,17 +107,6 @@ a:hover {
   margin-left: 24px;
 }
 
-.circle {
-  display: none;
-  top: -50%;
-  left: -45%;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  border: 1px solid #F5F5F5;
-  border-radius: 50%;
-}
-
 .header_icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,34 +128,61 @@ a:hover {
 .header_icons > div > a:hover .circle {
   display: block;
 }
-
-.loupe {
+.header_icons__circle {
+  display: none;
+  top: -50%;
+  left: -45%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border: 1px solid #F5F5F5;
+  border-radius: 50%;
+}
+.header_icons__loupe {
   background-image: url("../img/header/loupe.svg");
   position: relative;
 }
-
-.phone {
+.header_icons__phone {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/telephone.svg");
 }
-
-.statistics {
+.header_icons__statistics {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/statistics.svg");
 }
-
-.person {
+.header_icons__person {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/person.svg");
 }
-
-.basket {
+.header_icons__basket {
   position: relative;
   margin-left: 37px;
   background-image: url("../img/header/shopping-cart.svg");
+}
+
+.red-ball {
+  position: absolute;
+  top: 181px;
+  left: 15vw;
+  width: 35vw;
+  height: 634px;
+  background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%);
+  -webkit-filter: blur(32px);
+          filter: blur(32px);
+}
+
+.blue-ball {
+  position: absolute;
+  top: 108px;
+  left: 44vw;
+  width: 45vw;
+  height: 645px;
+  background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%);
+  -webkit-filter: blur(32px);
+          filter: blur(32px);
 }
 
 .info-ball {
@@ -430,7 +446,6 @@ a:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0px;
 }
 .review h3 {
   font-weight: 600;
@@ -464,22 +479,27 @@ a:hover {
   border-radius: 50%;
   border: 1px solid #F5F5F5;
 }
-.rolling-inscription_play {
-  position: absolute;
-  width: 27px;
-  height: 27px;
-  background: url(../img/info-ball/play.svg);
-  background-size: cover;
-}
 .rolling-inscription_text {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 125px;
+  height: 125px;
   color: #F5F5F5;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
+  -webkit-animation: rotateText 10s linear infinite;
+          animation: rotateText 10s linear infinite;
+}
+.rolling-inscription_play {
+  position: absolute;
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  background: url(../img/info-ball/play.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .rolling-inscription span {
   padding-top: 4px;
@@ -511,6 +531,11 @@ a:hover {
             transform: rotate(360deg);
   }
 }
+.hockey-sticks-with-stripes {
+  height: 866px;
+  position: relative;
+}
+
 .hockey-sticks {
   width: 1218px;
   margin: 0 auto;
@@ -525,7 +550,7 @@ a:hover {
           justify-content: space-between;
   margin-bottom: 40px;
 }
-.hockey-sticks_nav > div {
+.hockey-sticks_nav div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,21 +581,20 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.hockey-sticks_sticks__stick > img {
+.hockey-sticks_sticks__stick_price {
+  padding-top: 8px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+.hockey-sticks_sticks__stick img {
   height: 282px;
   width: 271px;
 }
 .hockey-sticks_sticks__stick p {
   font-size: 18px;
   line-height: 24px;
-}
-
-.price {
-  padding-top: 8px;
-  margin-bottom: 24px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
 }
 
 .buttons-more-statistics {
@@ -605,7 +629,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.buttons-more-statistics .button-shevron__right > div {
+.buttons-more-statistics .button-shevron__right div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,12 +643,12 @@ a:hover {
   width: 159px;
   height: 22px;
 }
-.buttons-more-statistics .button-shevron__right > div p {
+.buttons-more-statistics .button-shevron__right div p {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
 }
-.buttons-more-statistics .button-shevron__right > div div {
+.buttons-more-statistics .button-shevron__right div div {
   background-image: url("../img/hockey-sticks/shevron.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -640,7 +664,7 @@ a:hover {
 .main-info_ideal-hockey-stick {
   height: 971px;
 }
-.main-info_ideal-hockey-stick > .charger {
+.main-info_ideal-hockey-stick .charger {
   position: absolute;
   width: 1218px;
   height: 130px;
@@ -696,13 +720,13 @@ a:hover {
   padding-top: 100px;
   margin-left: 160px;
 }
-.main-info_about-brand__text > h3 {
+.main-info_about-brand__text h3 {
   font-weight: 700;
   font-size: 48px;
   line-height: 52px;
   margin-bottom: 24px;
 }
-.main-info_about-brand__text > p {
+.main-info_about-brand__text p {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -712,19 +736,19 @@ a:hover {
   width: 594px;
   padding-top: 179px;
 }
-.main-info_about-brand__flex > h3 {
+.main-info_about-brand__flex h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 120%;
   margin-bottom: 16px;
 }
-.main-info_about-brand__flex > p {
+.main-info_about-brand__flex p {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 40px;
 }
-.main-info_about-brand__flex > img {
+.main-info_about-brand__flex img {
   margin-bottom: 54px;
 }
 .main-info_discount {
@@ -742,7 +766,7 @@ a:hover {
   width: 662px;
   margin-left: 350px;
 }
-.main-info_discount__text > h3 {
+.main-info_discount__text h3 {
   font-weight: 700;
   font-size: 90px;
   line-height: 104px;
@@ -750,18 +774,18 @@ a:hover {
   text-shadow: 1px 0px 2px #BCBCBC, 0px 1px 2px #BCBCBC, -1px 0px 2px #BCBCBC, 0px -1px 2px #BCBCBC;
   margin-bottom: 40px;
 }
-.main-info_discount__text > h3 span:nth-child(4) {
+.main-info_discount__text h3 span:nth-child(4) {
   color: #fff;
   text-shadow: none;
 }
-.main-info_discount__text > p {
+.main-info_discount__text p {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: #BCBCBC;
   margin-bottom: 32px;
 }
-.main-info_discount__text > input {
+.main-info_discount__text input {
   color: #7D7D7D;
 }
 .main-info_discount__circle {
@@ -785,7 +809,7 @@ a:hover {
   width: 655px;
   height: 655px;
 }
-.main-info_discount__circle_hidden > div {
+.main-info_discount__circle_hidden div {
   background-image: url("../img/main-info/hockey_player_circle.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -832,12 +856,12 @@ a:hover {
   -webkit-transform: translate(0px, 20px);
           transform: translate(0px, 20px);
 }
-.percent > img:nth-child(1) {
+.percent img:nth-child(1) {
   position: absolute;
   width: 57px;
   height: 56px;
 }
-.percent > img {
+.percent img {
   position: absolute;
   width: 22px;
   height: 22px;
@@ -847,7 +871,7 @@ a:hover {
   bottom: 0;
   right: 0;
 }
-.percent > div {
+.percent div {
   position: absolute;
   top: 0;
   left: 0;
@@ -869,7 +893,7 @@ a:hover {
   padding: 0px 0px 10px;
   font-family: inherit;
 }
-.form-group > input {
+.form-group input {
   background: transparent;
   color: #fff;
 }
@@ -979,6 +1003,31 @@ a:hover {
           animation: 10s linear infinite stripe2;
 }
 
+@-webkit-keyframes stripe1 {
+  100% {
+    -webkit-transform: translate(100vw, 0vw);
+            transform: translate(100vw, 0vw);
+  }
+}
+
+@keyframes stripe1 {
+  100% {
+    -webkit-transform: translate(100vw, 0vw);
+            transform: translate(100vw, 0vw);
+  }
+}
+@-webkit-keyframes stripe2 {
+  100% {
+    -webkit-transform: translate(0vw, 0vw);
+            transform: translate(0vw, 0vw);
+  }
+}
+@keyframes stripe2 {
+  100% {
+    -webkit-transform: translate(0vw, 0vw);
+            transform: translate(0vw, 0vw);
+  }
+}
 footer {
   padding-top: 100px;
   height: 671px;
@@ -998,7 +1047,7 @@ footer .wrapper {
 footer .wrapper .container {
   width: 1186px;
 }
-footer .logo-small-with-icons {
+footer .wrapper .container .logo-small-with-icons {
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1007,11 +1056,11 @@ footer .logo-small-with-icons {
       -ms-flex-align: center;
           align-items: center;
 }
-footer .logo-small-with-icons img {
+footer .wrapper .container .logo-small-with-icons img {
   width: 261px;
   height: 27px;
 }
-footer .logo-small-with-icons .icons {
+footer .wrapper .container .logo-small-with-icons .icons {
   margin-left: 50px;
   width: 96px;
   height: 40px;
@@ -1022,19 +1071,19 @@ footer .logo-small-with-icons .icons {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .logo-small-with-icons .icons a:nth-child(1) {
+footer .wrapper .container .logo-small-with-icons .icons a:nth-child(1) {
   width: 40px;
   height: 40px;
   background-image: url("../img/footer/tg.svg");
   background-size: contain;
 }
-footer .logo-small-with-icons .icons a:nth-child(2) {
+footer .wrapper .container .logo-small-with-icons .icons a:nth-child(2) {
   width: 40px;
   height: 40px;
   background-image: url("../img/footer/vk.svg");
   background-size: contain;
 }
-footer .contacts {
+footer .wrapper .container .contacts {
   padding-top: 33px;
   font-weight: 400;
   font-size: 16px;
@@ -1046,51 +1095,51 @@ footer .contacts {
   -ms-grid-columns: 352px 167px auto;
   grid-template-columns: 352px auto;
 }
-footer .contacts .thin {
+footer .wrapper .container .contacts .thin {
   color: #BCBCBC;
   padding-top: 16px;
   margin-bottom: 4px;
 }
-footer .contacts .bold {
+footer .wrapper .container .contacts .bold {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 24px;
 }
-footer .contacts_row-requisites a {
+footer .wrapper .container .contacts_row-requisites a {
   color: #BCBCBC;
   text-decoration: underline;
 }
-footer .contacts_row-requisites a:hover {
+footer .wrapper .container .contacts_row-requisites a:hover {
   color: #000;
 }
-footer .contacts_row-requisites__sub-columns {
+footer .wrapper .container .contacts_row-requisites__sub-columns {
   display: -ms-grid;
   display: grid;
   grid-gap: 167px;
   -ms-grid-columns: 138px 167px 168px;
   grid-template-columns: 138px 168px;
 }
-footer .contacts_row-requisites__bottom {
+footer .wrapper .container .contacts_row-requisites__bottom {
   color: #7D7D7D;
   padding-top: 68px;
   padding-bottom: 8px;
 }
-footer .contacts_row-about-company a {
+footer .wrapper .container .contacts_row-about-company a {
   display: block;
   margin-bottom: 16px;
 }
-footer .contacts_row-about-company a:hover {
+footer .wrapper .container .contacts_row-about-company a:hover {
   color: #000;
 }
-footer .contacts_row-about-company_columns {
+footer .wrapper .container .contacts_row-about-company_columns {
   display: -ms-grid;
   display: grid;
   grid-gap: 80px;
   -ms-grid-columns: 200px 80px 386px;
   grid-template-columns: 200px 386px;
 }
-footer .contacts_row-about-company_sub-columns {
+footer .wrapper .container .contacts_row-about-company_sub-columns {
   padding-top: 56px;
   display: -ms-grid;
   display: grid;
@@ -1101,7 +1150,7 @@ footer .contacts_row-about-company_sub-columns {
       -ms-flex-align: end;
           align-items: end;
 }
-footer .contacts_row-about-company_sub-columns img {
+footer .wrapper .container .contacts_row-about-company_sub-columns img {
   margin-bottom: 16px;
 }
 
@@ -1110,13 +1159,4 @@ html, body {
   font-family: "Raleway", sans-serif;
   background: #F5F5F5;
   overflow-x: hidden;
-}
-
-a {
-  cursor: pointer;
-}
-
-.hockey-sticks-with-stripes {
-  height: 866px;
-  position: relative;
 }
