@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "https://fonts.googleapis.com/css2?family=Raleway&display=swap";
 * {
   padding: 0;
@@ -64,15 +65,13 @@ header {
   line-height: 22px;
   color: #7D7D7D;
 }
-
-a {
+header a {
   color: #7D7D7D;
 }
-a:hover {
+header a:hover {
   color: #D8D8D8;
 }
-
-.logo-with-languages {
+header .logo-with-languages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,32 +81,27 @@ a:hover {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.logo-with-languages_logo {
+header .logo-with-languages_logo {
   width: 62px;
   height: 30px;
 }
-.logo-with-languages_languages {
-  margin-left: 40px;
+header .logo-with-languages_languages {
+  margin-left: 0px;
   width: 57px;
   height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
-.nav-links a {
+header .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .nav-links a {
   margin-left: 24px;
 }
-
-.items {
-  margin-left: 175px;
-  top: 30px;
-}
-.items > a {
-  margin-left: 24px;
-}
-
-.header_icons {
+header .header_icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,19 +110,19 @@ a:hover {
           align-items: center;
   position: relative;
 }
-.header_icons > div {
+header .header_icons > div {
   width: 26px;
   height: 26px;
 }
-.header_icons > div > a {
+header .header_icons > div > a {
   display: block;
   width: 26px;
   height: 26px;
 }
-.header_icons > div > a:hover .circle {
+header .header_icons > div > a:hover .circle {
   display: block;
 }
-.header_icons__circle {
+header .header_icons__circle {
   display: none;
   top: -50%;
   left: -45%;
@@ -138,26 +132,26 @@ a:hover {
   border: 1px solid #F5F5F5;
   border-radius: 50%;
 }
-.header_icons__loupe {
+header .header_icons__loupe {
   background-image: url("../img/header/loupe.svg");
   position: relative;
 }
-.header_icons__phone {
+header .header_icons__phone {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/telephone.svg");
 }
-.header_icons__statistics {
+header .header_icons__statistics {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/statistics.svg");
 }
-.header_icons__person {
+header .header_icons__person {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/person.svg");
 }
-.header_icons__basket {
+header .header_icons__basket {
   position: relative;
   margin-left: 37px;
   background-image: url("../img/header/shopping-cart.svg");
@@ -332,7 +326,7 @@ a:hover {
   position: absolute;
   width: 78px;
   height: 58px;
-  border: 1px solid rgba(125, 125, 125, 0.8);
+  border: 1px solid #7D7D7DCC;
   z-index: 2;
 }
 .button-shevron:hover {
@@ -398,13 +392,13 @@ a:hover {
   position: relative;
   display: block;
 }
-.charger-slider_slider > .button-shevron {
+.charger-slider_slider .button-shevron {
   top: 50%;
 }
-.charger-slider_slider > .button-shevron__left {
+.charger-slider_slider .button-shevron__left {
   left: 18%;
 }
-.charger-slider_slider > .button-shevron__right {
+.charger-slider_slider .button-shevron__right {
   right: 18%;
 }
 .charger-slider_slider__cards {
@@ -1157,6 +1151,100 @@ footer .wrapper .container .contacts_row-about-company_sub-columns img {
 html, body {
   background-color: #F5F5F5;
   font-family: "Raleway", sans-serif;
-  background: #F5F5F5;
   overflow-x: hidden;
+}
+
+/* lg-размер (<=1199px) */
+@media (max-width: 1199px) {
+  .charger-slider_charger {
+    width: 100vw;
+  }
+}
+/* md-размер (<=991px) */
+@media (max-width: 991px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    height: 150px;
+  }
+  header .logo-with-languages {
+    padding: 10px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .logo-with-languages_languages {
+    padding-top: 10px;
+    margin-left: 0px;
+  }
+  header .nav-links {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header .nav-links a {
+    margin-left: 0px;
+  }
+  header .header_icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header .header_icons div {
+    margin-left: 0px;
+  }
+
+  .info-ball {
+    width: 100px;
+    height: 100px;
+  }
+
+  .charger-slider_charger {
+    display: none;
+  }
+  .charger-slider_slider {
+    width: 100vw;
+  }
+  .charger-slider_slider__card {
+    width: 100vw;
+  }
+  .charger-slider_slider__card img {
+    width: 100vw;
+  }
+
+  .charger-slider_slider .button-shevron {
+    top: 20%;
+  }
+}
+/* sm-размер (<=768px) */
+/* xs-размер (<=575px) */
+@media (max-width: 575px) {
+  header {
+    border: 1px sold #e61414;
+    height: 150px;
+  }
+
+  .review h3 {
+    font-size: 14px;
+  }
+  .review h4 {
+    font-size: 12px;
+  }
+
+  .rolling-inscription_text {
+    font-size: 12px;
+  }
 }

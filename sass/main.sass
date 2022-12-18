@@ -24,5 +24,102 @@
 html, body
 	background-color: #F5F5F5
 	font-family: 'Raleway', sans-serif
-	background: #F5F5F5
 	overflow-x: hidden
+
+/* lg-размер (<=1199px) */
+@media (max-width: 1199px)
+	.charger-slider
+		&_charger
+			width: 100vw
+
+/* md-размер (<=991px) */
+@media (max-width: 991px)
+
+	header
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		height: 150px
+
+		.logo-with-languages
+			padding: 10px 0
+			flex-direction: column
+
+			&_languages
+				padding-top: 10px
+				margin-left: 0px
+
+		.nav-links
+			margin: 0 auto
+			display: flex
+			text-align: center
+			flex-direction: column
+			justify-content: space-around
+
+			a 
+				margin-left: 0px
+
+		.header_icons
+			display: flex
+			justify-content: space-around
+			div
+				margin-left: 0px
+	
+	.info-ball
+		width: 100px
+		height: 100px
+
+	.charger-slider
+		&_charger
+			display: none
+
+		&_slider
+			width: 100vw
+
+			&__card
+				width: 100vw
+
+				img
+					width: 100vw
+
+	.charger-slider_slider
+		
+		.button-shevron
+			top: 20%
+
+
+
+
+
+@media (max-width: 800px)
+
+
+/* sm-размер (<=768px) */
+@media (max-width: 767px) 
+
+
+
+/* xs-размер (<=575px) */
+@media (max-width: 575px)
+
+	header
+		border: 1px sold #e61414
+		height: 150px
+
+		// .nav-links
+		// 	flex-direction: column
+	
+	.review
+		h3
+			font-size: 14px
+		h4
+			font-size: 12px
+
+	.rolling-inscription
+		
+		&_text
+			font-size: 12px
+
+
+			
+
+@media (max-width: 300px) 
