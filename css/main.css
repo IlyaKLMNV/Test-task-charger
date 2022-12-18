@@ -35,6 +35,14 @@ button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
+button:active, button:focus {
+  outline: none !important;
+}
+
+button::-moz-focus-inner {
+  border: 0 !important;
+}
+
 a, a:visited {
   text-decoration: none;
 }
@@ -86,7 +94,7 @@ header .logo-with-languages_logo {
   height: 30px;
 }
 header .logo-with-languages_languages {
-  margin-left: 0px;
+  margin-left: 40px;
   width: 57px;
   height: 22px;
   display: -webkit-box;
@@ -199,6 +207,7 @@ header .header_icons__basket {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .in-catalog {
@@ -211,8 +220,7 @@ header .header_icons__basket {
           box-shadow: 0px 0px 10px #ffffff;
 }
 .in-catalog_text {
-  width: 75px;
-  height: 20px;
+  width: 80%;
   font-family: "Raleway";
   font-weight: 600;
   font-size: 16px;
@@ -227,6 +235,7 @@ header .header_icons__basket {
   top: 657px;
 }
 .do-test_text {
+  width: 80%;
   color: #333333;
   font-weight: 600;
   font-size: 16px;
@@ -249,10 +258,12 @@ header .header_icons__basket {
       -ms-flex-align: center;
           align-items: center;
   color: #F64F00;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
 }
-.more-about-company_text {
-  width: 91px;
-  height: 40px;
+.more-about-company_briefly {
+  width: 80%;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -279,14 +290,11 @@ header .header_icons__basket {
 .discount_text {
   cursor: pointer;
   color: #333333;
-  width: 104px;
-  padding: 0;
-  margin: 0;
-  height: 20px;
+  width: 80%;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  background-color: transparent;
 }
 .discount:hover {
   -webkit-box-shadow: 0px 0px 10px #ffffff;
@@ -310,8 +318,7 @@ header .header_icons__basket {
 }
 .connect_text {
   text-align: center;
-  width: 89px;
-  height: 40px;
+  width: 80%;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -415,9 +422,10 @@ header .header_icons__basket {
       flex-shrink: 0;
   margin: 0 200px;
   width: 992px;
-  height: 601px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.charger-slider_slider__card img {
   border-radius: 100px 0px;
 }
 .charger-slider_slider__card--active {
@@ -552,6 +560,9 @@ header .header_icons__basket {
 .hockey-sticks_nav .button-shevron {
   position: static;
 }
+.hockey-sticks_nav .button-shevron__left {
+  border-right: none;
+}
 .hockey-sticks h3 {
   font-weight: 700;
   font-size: 48px;
@@ -671,18 +682,17 @@ header .header_icons__basket {
   padding-top: 100px;
 }
 .main-info_ideal-hockey-stick__text h3 {
-  width: 630px;
-  margin: 0 auto 24px;
+  text-align: center;
+  text-align: center;
+  margin-bottom: 24px;
   color: #F5F5F5;
   font-weight: 700;
   font-size: 48px;
   line-height: 52px;
   text-align: center;
 }
-.main-info_ideal-hockey-stick__text h4 {
-  width: 546px;
-  height: 24px;
-  margin: 0 auto 55px;
+.main-info_ideal-hockey-stick__text p {
+  text-align: center;
   color: #D8D8D8;
   font-weight: 400;
   font-size: 18px;
@@ -698,66 +708,71 @@ header .header_icons__basket {
 .main-info_about-brand {
   height: 1323px;
   margin-left: 190px;
+  padding-right: 190px;
   background: #F5F5F5;
   border-radius: 100px 0px 0px 100px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 134px 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 134px;
-     -moz-column-gap: 134px;
-          column-gap: 134px;
   color: #333333;
 }
-.main-info_about-brand__text {
-  width: 491px;
+.main-info_about-brand h3 {
+  margin-left: 160px;
   padding-top: 100px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+}
+.main-info_about-brand_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-info_about-brand_info__briefly {
+  width: 100%;
   margin-left: 160px;
 }
-.main-info_about-brand__text h3 {
+.main-info_about-brand_info__briefly h4 {
   font-weight: 700;
   font-size: 48px;
   line-height: 52px;
   margin-bottom: 24px;
 }
-.main-info_about-brand__text p {
+.main-info_about-brand_info__briefly p {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   margin-bottom: 40px;
 }
-.main-info_about-brand__flex {
-  width: 594px;
-  padding-top: 179px;
+.main-info_about-brand_info__expanded {
+  min-width: 594px;
+  margin-left: 134px;
 }
-.main-info_about-brand__flex h3 {
+.main-info_about-brand_info__expanded h4 {
   font-weight: 600;
   font-size: 24px;
   line-height: 120%;
   margin-bottom: 16px;
 }
-.main-info_about-brand__flex p {
+.main-info_about-brand_info__expanded p {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   margin-bottom: 40px;
 }
-.main-info_about-brand__flex img {
-  margin-bottom: 54px;
+.main-info_about-brand_info__expanded img {
+  border-radius: 60px 0px;
+  margin-bottom: 56px;
 }
 .main-info_discount {
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 271px 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 271px;
-     -moz-column-gap: 271px;
-          column-gap: 271px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 117px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .main-info_discount__text {
-  width: 662px;
+  min-width: 662px;
   margin-left: 350px;
 }
 .main-info_discount__text h3 {
@@ -785,7 +800,7 @@ header .header_icons__basket {
 .main-info_discount__circle {
   border: 1px solid #333333;
   border-radius: 50%;
-  width: 736px;
+  min-width: 736px;
   height: 736px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -800,15 +815,11 @@ header .header_icons__basket {
 .main-info_discount__circle_hidden {
   border-radius: 50%;
   overflow: hidden;
-  width: 655px;
-  height: 655px;
-}
-.main-info_discount__circle_hidden div {
-  background-image: url("../img/main-info/hockey_player_circle.png");
-  background-size: contain;
+  width: 645px;
+  height: 645px;
+  background-image: url("../img/charger-slider/slider_hockey_player.png");
+  background-position: -260px 0px;
   background-repeat: no-repeat;
-  width: 655px;
-  height: 655px;
 }
 
 .lightning {
@@ -888,6 +899,8 @@ header .header_icons__basket {
   font-family: inherit;
 }
 .form-group input {
+  width: 100%;
+  outline: none;
   background: transparent;
   color: #fff;
 }
@@ -913,7 +926,7 @@ header .header_icons__basket {
 }
 .stripes_blue__sentence1 {
   position: absolute;
-  width: 100vw;
+  width: 4000px;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -923,12 +936,12 @@ header .header_icons__basket {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-animation: 10s linear infinite stripe1;
-          animation: 10s linear infinite stripe1;
+  -webkit-animation: 15s linear infinite stripe1;
+          animation: 15s linear infinite stripe1;
 }
 .stripes_blue__sentence2 {
   position: absolute;
-  width: 100vw;
+  width: 4000px;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -938,10 +951,10 @@ header .header_icons__basket {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transform: translate(-100vw, 0px);
-          transform: translate(-100vw, 0px);
-  -webkit-animation: 10s linear infinite stripe2;
-          animation: 10s linear infinite stripe2;
+  -webkit-transform: translate(-4000px, 0px);
+          transform: translate(-4000px, 0px);
+  -webkit-animation: 15s linear infinite stripe2;
+          animation: 15s linear infinite stripe2;
 }
 .stripes_white {
   padding-right: 20px;
@@ -966,7 +979,7 @@ header .header_icons__basket {
 }
 .stripes_white__sentence1 {
   position: absolute;
-  width: 100vw;
+  width: 4000px;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,12 +989,12 @@ header .header_icons__basket {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-animation: 10s linear infinite stripe1;
-          animation: 10s linear infinite stripe1;
+  -webkit-animation: 15s linear infinite stripe1;
+          animation: 15s linear infinite stripe1;
 }
 .stripes_white__sentence2 {
   position: absolute;
-  width: 100vw;
+  width: 4000px;
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -991,23 +1004,23 @@ header .header_icons__basket {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-transform: translate(-100vw, 0px);
-          transform: translate(-100vw, 0px);
-  -webkit-animation: 10s linear infinite stripe2;
-          animation: 10s linear infinite stripe2;
+  -webkit-transform: translate(-4000px, 0px);
+          transform: translate(-4000px, 0px);
+  -webkit-animation: 15s linear infinite stripe2;
+          animation: 15s linear infinite stripe2;
 }
 
 @-webkit-keyframes stripe1 {
   100% {
-    -webkit-transform: translate(100vw, 0vw);
-            transform: translate(100vw, 0vw);
+    -webkit-transform: translate(4000px, 0vw);
+            transform: translate(4000px, 0vw);
   }
 }
 
 @keyframes stripe1 {
   100% {
-    -webkit-transform: translate(100vw, 0vw);
-            transform: translate(100vw, 0vw);
+    -webkit-transform: translate(4000px, 0vw);
+            transform: translate(4000px, 0vw);
   }
 }
 @-webkit-keyframes stripe2 {
@@ -1120,6 +1133,7 @@ footer .wrapper .container .contacts_row-requisites__bottom {
   padding-bottom: 8px;
 }
 footer .wrapper .container .contacts_row-about-company a {
+  color: #333333;
   display: block;
   margin-bottom: 16px;
 }
@@ -1146,12 +1160,6 @@ footer .wrapper .container .contacts_row-about-company_sub-columns {
 }
 footer .wrapper .container .contacts_row-about-company_sub-columns img {
   margin-bottom: 16px;
-}
-
-html, body {
-  background-color: #F5F5F5;
-  font-family: "Raleway", sans-serif;
-  overflow-x: hidden;
 }
 
 /* lg-размер (<=1199px) */
@@ -1247,4 +1255,9 @@ html, body {
   .rolling-inscription_text {
     font-size: 12px;
   }
+}
+html, body {
+  background-color: #F5F5F5;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
 }

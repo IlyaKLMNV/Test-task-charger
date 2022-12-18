@@ -9,7 +9,6 @@
 		// фоновое изображение
 		.charger
 			position: absolute
-			// top: 505px
 			width: 1218px
 			height: 130px
 			margin: 0 auto
@@ -21,18 +20,22 @@
 			padding-top: 100px
 
 			h3
-				width: 630px
-				margin: 0 auto 24px
+				text-align: center
+				// width: 630px
+				text-align: center
+				// margin: 0 auto 24px
+				margin-bottom: 24px
 				color: #F5F5F5
 				font-weight: 700
 				font-size: 48px
 				line-height: 52px
 				text-align: center
 
-			h4
-				width: 546px
-				height: 24px
-				margin: 0 auto 55px
+			p
+				text-align: center
+				// width: 546px
+				// height: 24px
+				// margin: 0 auto 55px
 				color: #D8D8D8
 				font-weight: 400
 				font-size: 18px
@@ -48,61 +51,68 @@
 	// текст с сновной информацией о компании и ее продуктах
 	&_about-brand
 		height: 1323px
-		// margin-top: 705px
 		margin-left: 190px
+		padding-right: 190px
 		background: #F5F5F5
 		border-radius: 100px 0px 0px 100px
-		display: grid
-		grid-template-columns: repeat(2, 1fr)
-		column-gap: 134px
 		color: #333333
 
-		&__text
-			width: 491px
-			padding-top: 100px
+		h3
 			margin-left: 160px
+			padding-top: 100px
+			margin-bottom: 24px
+			font-weight: 700
+			font-size: 48px
+			line-height: 52px
 
-			h3
-				font-weight: 700
-				font-size: 48px
-				line-height: 52px
-				margin-bottom: 24px
+		&_info
+			display: flex
 
-			p
-				font-weight: 400
-				font-size: 18px
-				line-height: 24px
-				margin-bottom: 40px
+			&__briefly
+				width: 100%
+				margin-left: 160px
 
-		&__flex
-			width: 594px
-			padding-top: 179px
+				h4
+					font-weight: 700
+					font-size: 48px
+					line-height: 52px
+					margin-bottom: 24px
 
-			h3
-				font-weight: 600
-				font-size: 24px
-				line-height: 120%
-				margin-bottom: 16px
+				p
+					font-weight: 400
+					font-size: 18px
+					line-height: 24px
+					margin-bottom: 40px
 
-			p
-				font-weight: 400
-				font-size: 16px
-				line-height: 22px
-				margin-bottom: 40px
+			&__expanded
+				min-width: 594px
+				margin-left: 134px
 
-			img
-				margin-bottom: 54px
+				h4
+					font-weight: 600
+					font-size: 24px
+					line-height: 120%
+					margin-bottom: 16px
+
+				p
+					font-weight: 400
+					font-size: 16px
+					line-height: 22px
+					margin-bottom: 40px
+
+				img
+					border-radius: 60px 0px
+					margin-bottom: 56px
 
 	// блок скидки за подписку
 	&_discount
 		position: relative
-		display: grid
-		grid-template-columns: repeat(2, 1fr)
-		column-gap: 271px
+		display: flex
 		padding-top: 117px
+		justify-content: space-around
 
 		&__text
-			width: 662px
+			min-width: 662px
 			margin-left: 350px
 
 			h3
@@ -128,11 +138,12 @@
 			input
 				color: #7D7D7D
 
-		// кнопка "подписаться" в виде круга
+		// изображение в рамке из двух кругов
 		&__circle
+
 			border: 1px solid #333333
 			border-radius: 50%
-			width: 736px
+			min-width: 736px
 			height: 736px
 			display: flex
 			align-items: center
@@ -141,17 +152,13 @@
 			&_hidden
 				border-radius: 50%
 				overflow: hidden
-				width: 655px
-				height: 655px
+				width: 645px
+				height: 645px
+				background-image: url("../img/charger-slider/slider_hockey_player.png")
+				background-position: -260px 0px
+				background-repeat: no-repeat
 
-				div
-					background-image: url("../img/main-info/hockey_player_circle.png")
-					background-size: contain
-					background-repeat: no-repeat
-					width: 655px
-					height: 655px
-
-// настройка фонового изображения для текста
+// светящаяся иконка молнии в блоке подписки
 .lightning
 	position: relative
 	display: inline-block
@@ -179,7 +186,7 @@
 		background: radial-gradient(50% 50% at 50% 50%, #0178F3 0%, rgba(1, 120, 243, 0) 100%)
 		filter: blur(32px)
 
-// настройка фонового изображения для текста
+// светящаяся иконка процента в блоке подписки
 .percent
 	position: relative
 	display: inline-block
@@ -212,7 +219,6 @@
 		background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
 		filter: blur(32px)
 
-
 // поле для ввода почты
 .form-group
 	color: #7D7D7D
@@ -226,6 +232,8 @@
 	font-family: inherit
 
 	input
+		width: 100%
+		outline: none
 		background: transparent
 		color: #fff
 
