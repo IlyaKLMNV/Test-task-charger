@@ -1,98 +1,389 @@
-/* lg-размер (<=1199px) */
-@media (max-width: 1199px)
-	.charger-slider
-		&_charger
-			width: 100vw
+@media (max-width: 1590px)
+	.main-info
+		&_discount
+			&__text
+				h3
+					font-size: 50px
+
+			&__circle
+				min-width: 636px
+				height: 636px
+
+				&_hidden
+					width: 536px
+					height: 536px
+
+	.lightning
+		width: 55px
+		height: 55px
+		transform: none
+
+		img
+			width: 64px
+			height: 63px
+
+		div
+			width: 105px
+			height: 105px
+			top: -20px
+			left: -20px
+
+	.percent
+		width: 55px
+		height: 55px
+		transform: translate(0px, 10px)
+		margin-right: 0px
+
+@media (max-width: 1250px)
+	.main-info
+		height: 3100px
+
+		&_discount
+			flex-direction: column
+			align-items: center
+
+			&__text
+				h3
+					font-size: 40px
+			&__circle
+				min-width: 536px
+				height: 536px
+
+				&_hidden
+					width: 436px
+					height: 436px
+
+		&_ideal-hockey-stick
+			height: 800px
+
+			.charger
+				top: 405px
+
+			img
+				width: 800px
+				height: 565px
+
+		&_about-brand
+			height: 1150px
+
+			&_info
+				&__expanded
+					img
+						width: 450px
+						height: 261px
+	.discount
+		top: -100px
+		right: -200px
+
+	.do-test
+		top: 557px
+		
+	footer
+		.wrapper
+			.container
+				width: 980px
+
+				.contacts
+					grid-gap: 50px
+
+					&_row-requisites
+						&__sub-columns
+							grid-gap: 50px
+
+					&_row-about-company
+						&_columns
+							grid-gap: 40px
+
+						&_sub-columns
+							grid-template-columns: 200px 386px
+							grid-gap: 40px
+
 
 /* md-размер (<=991px) */
 @media (max-width: 991px)
+	// .open
+	// 	transform: translateX(100vw)
+
+	.discount
+		&_text
+			font-size: 14px
 
 	header
-		display: grid
-		grid-template-columns: repeat(3, 1fr)
-		height: 150px
 
-		.logo-with-languages
-			padding: 10px 0
+		.menu
+			position: relative
+			width: 100%
+			align-items: baseline
 			flex-direction: column
+			
+			font-size: 16px
+			color: #131111
 
-			&_languages
+			.header_button
+				width: 100%
+				display: flex
+
+			.logo-with-languages
+				display: none
+
+			.header_icons
+				display: none
+
+			.nav-links
+				top: 60px
+				left: -100vw
+				position: absolute
+				display: flex
+				flex-direction: column
+				justify-content: space-around
 				padding-top: 10px
-				margin-left: 0px
+				padding-left: 10px
+				font-weight: 700
+				transition: transform 0.5s
 
-		.nav-links
-			margin: 0 auto
-			display: flex
-			text-align: center
-			flex-direction: column
-			justify-content: space-around
+				a 
+						margin-left: 0px
 
-			a 
-				margin-left: 0px
+		.open
+			.nav-links
+				transform: translateX(100vw)
+			
+			.header_button__menu-burger
+				div
+					&:nth-child(1)
+						transform: translateY(4px) rotate(45deg)
 
-		.header_icons
-			display: flex
-			justify-content: space-around
-			div
-				margin-left: 0px
-	
+					&:nth-child(2)
+						opacity: 0
+
+					&:nth-child(3)
+						transform: translateY(-2px) rotate(-45deg)
+
+	.balls
+		display: none
+
 	.info-ball
 		width: 100px
 		height: 100px
 
+	.in-catalog
+		top: 168px
+	
+	.review
+		top: 306px
+		left: 40%
+
 	.charger-slider
+		height: 100%
+		padding-top: 100px
+
 		&_charger
 			display: none
+			width: 90%
+			height: 117px
 
 		&_slider
 			width: 100vw
 
 			&__card
-				width: 100vw
+				width: 90vw
 
 				img
-					width: 100vw
+					width: 90vw
 
-	.charger-slider_slider
+				.review
+					top: 45%
+
+					h3, h4
+						display: none
+
+	.main-info
+		height: 100%
+		padding-bottom: 30px
 		
-		.button-shevron
-			top: 20%
+		&_about-brand
+			height: 100%
+			position: relative
 
+			&_info
+				grid-template-columns: 1fr
+				
 
+				&__expanded
+					img
+						width: 450px
+						height: 261px
 
+	.more-about-company
+		top: 30px
 
+	.discount
+		top: -250px
+		left: 350px
 
-@media (max-width: 800px)
+	footer
+		.wrapper
+			.container
+				width: 680px
+
+				.contacts
+					grid-gap: 20px
+
+					&_row-requisites
+						&__sub-columns
+							grid-gap: 50px
+
+					&_row-about-company
+						&_columns
+							grid-gap: 40px
+							grid-template-columns: 1fr 1fr
+
+						&_sub-columns
+							grid-template-columns: 1fr 1fr
+							grid-gap: 40px
+
 
 
 /* sm-размер (<=768px) */
 @media (max-width: 767px) 
+	.main-info
+		height: 100%
+		padding-bottom: 30px
 
+		&_ideal-hockey-stick
+			height: 450px
+			.charger
+				display: none
+
+			img
+				display: none
+	
+		&_about-brand
+			height: 100%
+			padding: 0 30px
+			position: relative
+
+			h3
+				font-size: 20px
+				line-height: 1.3
+
+			&_info
+				grid-template-columns: minmax(200px, auto)
+
+				&__expanded
+					img
+						display: none
+
+	.do-test
+		left: 45vw
+		top: 300px
+
+	footer
+		padding-top: 20px
+		.wrapper
+
+			.logo-small-with-icons
+				justify-content: center
+				img
+					// display: none
+
+			.container
+				width: 680px
+
+				.contacts
+					display: flex
+
+					&_row-requisites
+						display: none
+
+					&_row-about-company
+						padding: 0 10px
+						display: grid 
+						grid-template-columns: 2fr 1fr
+						grid-column-gap: 15px
+
+						&_columns
+							display: flex
+
+						&_sub-columns
+							padding-top: 0
+							grid-template-columns: 1fr
+							align-items: start
+							grid-gap: 0
 
 
 /* xs-размер (<=575px) */
 @media (max-width: 575px)
 
 	header
-		border: 1px sold #e61414
-		height: 150px
 
-		// .nav-links
-		// 	flex-direction: column
+	.info-ball
+		display: none
 	
 	.review
+
 		h3
 			font-size: 14px
 		h4
 			font-size: 12px
 
 	.rolling-inscription
-		
+		display: none
 		&_text
 			font-size: 12px
 
+	.stripes
+		display: none
 
-			
+	.main-info
+		&_ideal-hockey-stick
+			height: 100%
+			padding-bottom: 150px
+
+			&__text
+				padding-top: 10px
+				h3
+					font-size: 20px
+					line-height: 1.3
+					margin-bottom: 10px
+				p
+					padding: 0 20px
+		
+		&_about-brand
+			margin-left: 0
+
+			h3
+				margin-left: 0
+
+		&_discount
+			flex-direction: column
+			align-items: center
+			padding: 10px
+
+			&__text
+				width: 100%
+				margin-left: 0
+				h3
+					font-size: 40px
+					text-align: center
+
+			&__circle
+				min-width: 336px
+				height: 336px
+
+				&_hidden
+					width: 236px
+					height: 236px
+
+	.do-test
+		display: flex
+		top: 150px
+		left: 40vw
+
+	footer
+		height: 100%
+		font-size: 12px
+		
 
 @media (max-width: 300px) 
 

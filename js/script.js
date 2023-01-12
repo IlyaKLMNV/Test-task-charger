@@ -1,7 +1,6 @@
 class Slider {
   constructor(element) {
     this.counter = 0;
-
     this.element = element;
     this.sliderCards = this.element.getElementsByClassName('charger-slider_slider__cards')[0];
     this.cards = this.element.getElementsByClassName('charger-slider_slider__card');
@@ -20,28 +19,23 @@ class Slider {
   }
 
   set _translateX(value) {
-    if (typeof value === 'number') {
-      console.log('value', value)
-      const translate = value;
-      this.sliderCards.style.transform = `translateX(${value}px)`;
-    }
+    const translate = value;
+    this.sliderCards.style.transform = `translateX(${value}px)`;
   }
   
   set _counter(value) {
-    if (typeof value === 'number') {
-      const lastIdx = this.cardsLength - 1;
-      if (value < 0) value = lastIdx;
-      if (value > lastIdx) value = 0;
-      
-      this.setActive(value)
-    }
+    const lastIdx = this.cardsLength - 1;
+    if (value < 0) value = lastIdx;
+    if (value > lastIdx) value = 0;
+    
+    this.setActive(value)
+
   }
   
   setActive(idx) {
     this.setActiveClass('remove');
     this.counter = idx;
     this.setActiveClass('add');
-    
     this.moveActiveToCenter();
   }
   setActiveClass(method) {
@@ -53,7 +47,6 @@ class Slider {
     const activeCard = this.cards[this.counter];
     const cardCenterX = activeCard.offsetLeft + activeCard.offsetWidth / 2;
     const exceptedCenterX = this.element.offsetLeft + this.element.offsetWidth / 2;
-    console.log(this.counter, this.element.offsetLeft, activeCard.offsetLeft)
     this._translateX = exceptedCenterX - cardCenterX;
   }
   
@@ -65,12 +58,22 @@ class Slider {
   }
 }
 
+addOpenClass = () => {
+  document.querySelector('.menu').classList.toggle('open');
+}
+
+const button = document.querySelector('.header_button__menu-burger');
+button.addEventListener('click', addOpenClass);
+
+
 const slider = new Slider(document.getElementById('slider'));
 slider.init();
+
 
 const text = document.querySelector('.rolling-inscription_text p');
 text.innerHTML = text.innerText.split("").map(
   (char, i) =>
   `<span style="transform:rotate(${i * 9.8}deg)">${char}</span>`
 ).join("")
+
 

@@ -59,6 +59,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 header {
   position: relative;
+}
+header .menu {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,19 +70,52 @@ header {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 80px;
   background-color: #131111;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 1.3;
+  color: #7D7D7D;
+  padding: 20px 0;
+}
+header .menu .header_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0 2px 3px #000;
+          box-shadow: 0 2px 3px #000;
+  padding: 0 10px 10px 10px;
+  display: none;
+  color: #fff;
+}
+header .menu .header_button__menu-burger {
+  width: 30px;
+  height: 30px;
+  -webkit-box-shadow: 0px 0px 4px #000;
+          box-shadow: 0px 0px 4px #000;
+  padding: 3px;
+}
+header .menu .header_button__menu-burger div {
+  border-bottom: 3px solid #000;
+}
+header .menu .header_button__menu-burger div:nth-child(1) {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+header .menu .header_button__menu-burger div:nth-child(3) {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+header .menu .header_button h2 {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+header .menu a {
   color: #7D7D7D;
 }
-header a {
-  color: #7D7D7D;
-}
-header a:hover {
+header .menu a:hover {
   color: #D8D8D8;
 }
-header .logo-with-languages {
+header .menu .logo-with-languages {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,11 +125,11 @@ header .logo-with-languages {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-header .logo-with-languages_logo {
+header .menu .logo-with-languages_logo {
   width: 62px;
   height: 30px;
 }
-header .logo-with-languages_languages {
+header .menu .logo-with-languages_languages {
   margin-left: 40px;
   width: 57px;
   height: 22px;
@@ -101,15 +137,15 @@ header .logo-with-languages_languages {
   display: -ms-flexbox;
   display: flex;
 }
-header .nav-links {
+header .menu .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-header .nav-links a {
+header .menu .nav-links a {
   margin-left: 24px;
 }
-header .header_icons {
+header .menu .header_icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,48 +154,35 @@ header .header_icons {
           align-items: center;
   position: relative;
 }
-header .header_icons > div {
+header .menu .header_icons > div {
   width: 26px;
   height: 26px;
 }
-header .header_icons > div > a {
+header .menu .header_icons > div > a {
   display: block;
   width: 26px;
   height: 26px;
 }
-header .header_icons > div > a:hover .circle {
-  display: block;
-}
-header .header_icons__circle {
-  display: none;
-  top: -50%;
-  left: -45%;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  border: 1px solid #F5F5F5;
-  border-radius: 50%;
-}
-header .header_icons__loupe {
+header .menu .header_icons__loupe {
   background-image: url("../img/header/loupe.svg");
   position: relative;
 }
-header .header_icons__phone {
+header .menu .header_icons__phone {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/telephone.svg");
 }
-header .header_icons__statistics {
+header .menu .header_icons__statistics {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/statistics.svg");
 }
-header .header_icons__person {
+header .menu .header_icons__person {
   margin-left: 16px;
   position: relative;
   background-image: url("../img/header/person.svg");
 }
-header .header_icons__basket {
+header .menu .header_icons__basket {
   position: relative;
   margin-left: 37px;
   background-image: url("../img/header/shopping-cart.svg");
@@ -214,6 +237,8 @@ header .header_icons__basket {
   left: 73vw;
   top: 168px;
   z-index: 1;
+  -webkit-box-shadow: 1px 1px 5px #000;
+          box-shadow: 1px 1px 5px #000;
 }
 .in-catalog:hover {
   -webkit-box-shadow: 0px 0px 10px #ffffff;
@@ -274,7 +299,7 @@ header .header_icons__basket {
 }
 
 .discount {
-  position: static;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,7 +315,7 @@ header .header_icons__basket {
 .discount_text {
   cursor: pointer;
   color: #333333;
-  width: 80%;
+  width: 100%;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
@@ -303,7 +328,7 @@ header .header_icons__basket {
 
 .connect {
   left: 74%;
-  top: 100px;
+  top: 20px;
   border: 1px solid #F64F00;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,12 +409,11 @@ header .header_icons__basket {
   height: 910px;
   background-color: #131111;
   padding-top: 40px;
-  margin-bottom: 103px;
 }
 .charger-slider_charger {
   width: 1096px;
   height: 117px;
-  margin: 0 auto 22px;
+  margin: 0px auto 22px;
 }
 .charger-slider_charger img {
   width: 100%;
@@ -437,7 +461,7 @@ header .header_icons__basket {
   width: 281px;
   height: 269px;
   left: 70%;
-  top: 48px;
+  top: 68px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,131 +558,8 @@ header .header_icons__basket {
   }
 }
 .hockey-sticks-with-stripes {
-  height: 866px;
+  background-color: #131111;
   position: relative;
-}
-
-.hockey-sticks {
-  width: 1218px;
-  margin: 0 auto;
-  color: #333333;
-}
-.hockey-sticks_nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 40px;
-}
-.hockey-sticks_nav div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.hockey-sticks_nav .button-shevron {
-  position: static;
-}
-.hockey-sticks_nav .button-shevron__left {
-  border-right: none;
-}
-.hockey-sticks h3 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
-}
-.hockey-sticks_sticks {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-}
-.hockey-sticks_sticks__stick {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.hockey-sticks_sticks__stick_price {
-  padding-top: 8px;
-  margin-bottom: 24px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-}
-.hockey-sticks_sticks__stick img {
-  height: 282px;
-  width: 271px;
-}
-.hockey-sticks_sticks__stick p {
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.buttons-more-statistics {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.buttons-more-statistics .button-shevron {
-  position: static;
-  height: 50px;
-}
-.buttons-more-statistics .button-shevron__left {
-  min-width: 64px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-right: 10px;
-}
-.buttons-more-statistics .button-shevron__left div {
-  width: 26px;
-  height: 26px;
-  background-image: url("../img/hockey-sticks/statistics.svg");
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-.buttons-more-statistics .button-shevron__right {
-  width: 207px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.buttons-more-statistics .button-shevron__right div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-image: none;
-  width: 159px;
-  height: 22px;
-}
-.buttons-more-statistics .button-shevron__right div p {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-}
-.buttons-more-statistics .button-shevron__right div div {
-  background-image: url("../img/hockey-sticks/shevron.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
 }
 
 .main-info {
@@ -683,7 +584,6 @@ header .header_icons__basket {
 }
 .main-info_ideal-hockey-stick__text h3 {
   text-align: center;
-  text-align: center;
   margin-bottom: 24px;
   color: #F5F5F5;
   font-weight: 700;
@@ -704,11 +604,12 @@ header .header_icons__basket {
   left: 20vw;
   width: 1048px;
   height: 741px;
+  z-index: 1;
 }
 .main-info_about-brand {
   height: 1323px;
   margin-left: 190px;
-  padding-right: 190px;
+  padding: 0 100px;
   background: #F5F5F5;
   border-radius: 100px 0px 0px 100px;
   color: #333333;
@@ -722,29 +623,25 @@ header .header_icons__basket {
   line-height: 52px;
 }
 .main-info_about-brand_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 50px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 50px;
 }
 .main-info_about-brand_info__briefly {
   width: 100%;
-  margin-left: 160px;
-}
-.main-info_about-brand_info__briefly h4 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
-  margin-bottom: 24px;
+  text-align: justify;
 }
 .main-info_about-brand_info__briefly p {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 40px;
 }
 .main-info_about-brand_info__expanded {
-  min-width: 594px;
-  margin-left: 134px;
+  width: 100%;
+  text-align: justify;
 }
 .main-info_about-brand_info__expanded h4 {
   font-weight: 600;
@@ -759,6 +656,8 @@ header .header_icons__basket {
   margin-bottom: 40px;
 }
 .main-info_about-brand_info__expanded img {
+  width: 600px;
+  height: 348px;
   border-radius: 60px 0px;
   margin-bottom: 56px;
 }
@@ -767,18 +666,17 @@ header .header_icons__basket {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 117px;
+  padding: 117px 100px 0px 100px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 .main-info_discount__text {
-  min-width: 662px;
-  margin-left: 350px;
+  margin-right: 10px;
 }
 .main-info_discount__text h3 {
   font-weight: 700;
   font-size: 90px;
-  line-height: 104px;
+  line-height: 1.2;
   color: #131111;
   text-shadow: 1px 0px 2px #BCBCBC, 0px 1px 2px #BCBCBC, -1px 0px 2px #BCBCBC, 0px -1px 2px #BCBCBC;
   margin-bottom: 40px;
@@ -840,8 +738,7 @@ header .header_icons__basket {
   bottom: 0;
   right: 0;
 }
-.lightning > div {
-  border: 1px solid #d81111;
+.lightning div {
   position: absolute;
   top: 0;
   left: 0;
@@ -887,6 +784,10 @@ header .header_icons__basket {
           filter: blur(32px);
 }
 
+form {
+  position: relative;
+}
+
 .form-group {
   color: #7D7D7D;
   width: 445px;
@@ -908,7 +809,6 @@ header .header_icons__basket {
 .stripes {
   position: absolute;
   text-transform: uppercase;
-  top: 735px;
   font-size: 18px;
   line-height: 22px;
 }
@@ -1162,57 +1062,186 @@ footer .wrapper .container .contacts_row-about-company_sub-columns img {
   margin-bottom: 16px;
 }
 
-/* lg-размер (<=1199px) */
-@media (max-width: 1199px) {
-  .charger-slider_charger {
-    width: 100vw;
+@media (max-width: 1590px) {
+  .main-info_discount__text h3 {
+    font-size: 50px;
+  }
+  .main-info_discount__circle {
+    min-width: 636px;
+    height: 636px;
+  }
+  .main-info_discount__circle_hidden {
+    width: 536px;
+    height: 536px;
+  }
+
+  .lightning {
+    width: 55px;
+    height: 55px;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .lightning img {
+    width: 64px;
+    height: 63px;
+  }
+  .lightning div {
+    width: 105px;
+    height: 105px;
+    top: -20px;
+    left: -20px;
+  }
+
+  .percent {
+    width: 55px;
+    height: 55px;
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+    margin-right: 0px;
+  }
+}
+@media (max-width: 1250px) {
+  .main-info {
+    height: 3100px;
+  }
+  .main-info_discount {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-info_discount__text h3 {
+    font-size: 40px;
+  }
+  .main-info_discount__circle {
+    min-width: 536px;
+    height: 536px;
+  }
+  .main-info_discount__circle_hidden {
+    width: 436px;
+    height: 436px;
+  }
+  .main-info_ideal-hockey-stick {
+    height: 800px;
+  }
+  .main-info_ideal-hockey-stick .charger {
+    top: 405px;
+  }
+  .main-info_ideal-hockey-stick img {
+    width: 800px;
+    height: 565px;
+  }
+  .main-info_about-brand {
+    height: 1150px;
+  }
+  .main-info_about-brand_info__expanded img {
+    width: 450px;
+    height: 261px;
+  }
+
+  .discount {
+    top: -100px;
+    right: -200px;
+  }
+
+  .do-test {
+    top: 557px;
+  }
+
+  footer .wrapper .container {
+    width: 980px;
+  }
+  footer .wrapper .container .contacts {
+    grid-gap: 50px;
+  }
+  footer .wrapper .container .contacts_row-requisites__sub-columns {
+    grid-gap: 50px;
+  }
+  footer .wrapper .container .contacts_row-about-company_columns {
+    grid-gap: 40px;
+  }
+  footer .wrapper .container .contacts_row-about-company_sub-columns {
+    -ms-grid-columns: 200px 40px 386px;
+    grid-template-columns: 200px 386px;
+    grid-gap: 40px;
   }
 }
 /* md-размер (<=991px) */
 @media (max-width: 991px) {
-  header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
-    height: 150px;
+  .discount_text {
+    font-size: 14px;
   }
-  header .logo-with-languages {
-    padding: 10px 0;
+
+  header .menu {
+    position: relative;
+    width: 100%;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-size: 16px;
+    color: #131111;
   }
-  header .logo-with-languages_languages {
+  header .menu .header_button {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .menu .logo-with-languages {
+    display: none;
+  }
+  header .menu .header_icons {
+    display: none;
+  }
+  header .menu .nav-links {
+    top: 60px;
+    left: -100vw;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 700;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+  }
+  header .menu .nav-links a {
     margin-left: 0px;
   }
-  header .nav-links {
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  header .open .nav-links {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
   }
-  header .nav-links a {
-    margin-left: 0px;
+  header .open .header_button__menu-burger div:nth-child(1) {
+    -webkit-transform: translateY(4px) rotate(45deg);
+            transform: translateY(4px) rotate(45deg);
   }
-  header .header_icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  header .open .header_button__menu-burger div:nth-child(2) {
+    opacity: 0;
   }
-  header .header_icons div {
-    margin-left: 0px;
+  header .open .header_button__menu-burger div:nth-child(3) {
+    -webkit-transform: translateY(-2px) rotate(-45deg);
+            transform: translateY(-2px) rotate(-45deg);
+  }
+
+  .balls {
+    display: none;
   }
 
   .info-ball {
@@ -1220,29 +1249,169 @@ footer .wrapper .container .contacts_row-about-company_sub-columns img {
     height: 100px;
   }
 
+  .in-catalog {
+    top: 168px;
+  }
+
+  .review {
+    top: 306px;
+    left: 40%;
+  }
+
+  .charger-slider {
+    height: 100%;
+    padding-top: 100px;
+  }
   .charger-slider_charger {
     display: none;
+    width: 90%;
+    height: 117px;
   }
   .charger-slider_slider {
     width: 100vw;
   }
   .charger-slider_slider__card {
-    width: 100vw;
+    width: 90vw;
   }
   .charger-slider_slider__card img {
-    width: 100vw;
+    width: 90vw;
+  }
+  .charger-slider_slider__card .review {
+    top: 45%;
+  }
+  .charger-slider_slider__card .review h3, .charger-slider_slider__card .review h4 {
+    display: none;
   }
 
-  .charger-slider_slider .button-shevron {
-    top: 20%;
+  .main-info {
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  .main-info_about-brand {
+    height: 100%;
+    position: relative;
+  }
+  .main-info_about-brand_info {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .main-info_about-brand_info__expanded img {
+    width: 450px;
+    height: 261px;
+  }
+
+  .more-about-company {
+    top: 30px;
+  }
+
+  .discount {
+    top: -250px;
+    left: 350px;
+  }
+
+  footer .wrapper .container {
+    width: 680px;
+  }
+  footer .wrapper .container .contacts {
+    grid-gap: 20px;
+  }
+  footer .wrapper .container .contacts_row-requisites__sub-columns {
+    grid-gap: 50px;
+  }
+  footer .wrapper .container .contacts_row-about-company_columns {
+    grid-gap: 40px;
+    -ms-grid-columns: 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .wrapper .container .contacts_row-about-company_sub-columns {
+    -ms-grid-columns: 1fr 40px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
   }
 }
 /* sm-размер (<=768px) */
+@media (max-width: 767px) {
+  .main-info {
+    height: 100%;
+    padding-bottom: 30px;
+  }
+  .main-info_ideal-hockey-stick {
+    height: 450px;
+  }
+  .main-info_ideal-hockey-stick .charger {
+    display: none;
+  }
+  .main-info_ideal-hockey-stick img {
+    display: none;
+  }
+  .main-info_about-brand {
+    height: 100%;
+    padding: 0 30px;
+    position: relative;
+  }
+  .main-info_about-brand h3 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .main-info_about-brand_info {
+    -ms-grid-columns: minmax(200px, auto);
+    grid-template-columns: minmax(200px, auto);
+  }
+  .main-info_about-brand_info__expanded img {
+    display: none;
+  }
+
+  .do-test {
+    left: 45vw;
+    top: 300px;
+  }
+
+  footer {
+    padding-top: 20px;
+  }
+  footer .wrapper .logo-small-with-icons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .wrapper .container {
+    width: 680px;
+  }
+  footer .wrapper .container .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .wrapper .container .contacts_row-requisites {
+    display: none;
+  }
+  footer .wrapper .container .contacts_row-about-company {
+    padding: 0 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 15px 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 15px;
+  }
+  footer .wrapper .container .contacts_row-about-company_columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .wrapper .container .contacts_row-about-company_sub-columns {
+    padding-top: 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    grid-gap: 0;
+  }
+}
 /* xs-размер (<=575px) */
 @media (max-width: 575px) {
-  header {
-    border: 1px sold #e61414;
-    height: 150px;
+  .info-ball {
+    display: none;
   }
 
   .review h3 {
@@ -1252,7 +1421,75 @@ footer .wrapper .container .contacts_row-about-company_sub-columns img {
     font-size: 12px;
   }
 
+  .rolling-inscription {
+    display: none;
+  }
   .rolling-inscription_text {
+    font-size: 12px;
+  }
+
+  .stripes {
+    display: none;
+  }
+
+  .main-info_ideal-hockey-stick {
+    height: 100%;
+    padding-bottom: 150px;
+  }
+  .main-info_ideal-hockey-stick__text {
+    padding-top: 10px;
+  }
+  .main-info_ideal-hockey-stick__text h3 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+  .main-info_ideal-hockey-stick__text p {
+    padding: 0 20px;
+  }
+  .main-info_about-brand {
+    margin-left: 0;
+  }
+  .main-info_about-brand h3 {
+    margin-left: 0;
+  }
+  .main-info_discount {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+  }
+  .main-info_discount__text {
+    width: 100%;
+    margin-left: 0;
+  }
+  .main-info_discount__text h3 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .main-info_discount__circle {
+    min-width: 336px;
+    height: 336px;
+  }
+  .main-info_discount__circle_hidden {
+    width: 236px;
+    height: 236px;
+  }
+
+  .do-test {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 150px;
+    left: 40vw;
+  }
+
+  footer {
+    height: 100%;
     font-size: 12px;
   }
 }

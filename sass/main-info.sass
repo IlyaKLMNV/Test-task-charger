@@ -5,6 +5,7 @@
 
 	&_ideal-hockey-stick
 		height: 971px
+
 		
 		// фоновое изображение
 		.charger
@@ -21,9 +22,6 @@
 
 			h3
 				text-align: center
-				// width: 630px
-				text-align: center
-				// margin: 0 auto 24px
 				margin-bottom: 24px
 				color: #F5F5F5
 				font-weight: 700
@@ -33,9 +31,6 @@
 
 			p
 				text-align: center
-				// width: 546px
-				// height: 24px
-				// margin: 0 auto 55px
 				color: #D8D8D8
 				font-weight: 400
 				font-size: 18px
@@ -47,12 +42,13 @@
 			left: 20vw
 			width: 1048px
 			height: 741px
+			z-index: 1
 	
 	// текст с сновной информацией о компании и ее продуктах
 	&_about-brand
 		height: 1323px
 		margin-left: 190px
-		padding-right: 190px
+		padding: 0 100px
 		background: #F5F5F5
 		border-radius: 100px 0px 0px 100px
 		color: #333333
@@ -66,27 +62,24 @@
 			line-height: 52px
 
 		&_info
-			display: flex
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			grid-column-gap: 50px
+			// margin-left: 160px
 
 			&__briefly
 				width: 100%
-				margin-left: 160px
-
-				h4
-					font-weight: 700
-					font-size: 48px
-					line-height: 52px
-					margin-bottom: 24px
+				text-align: justify
 
 				p
 					font-weight: 400
-					font-size: 18px
+					font-size: 16px
 					line-height: 24px
 					margin-bottom: 40px
 
 			&__expanded
-				min-width: 594px
-				margin-left: 134px
+				width: 100%
+				text-align: justify
 
 				h4
 					font-weight: 600
@@ -101,6 +94,8 @@
 					margin-bottom: 40px
 
 				img
+					width: 600px
+					height: 348px
 					border-radius: 60px 0px
 					margin-bottom: 56px
 
@@ -108,17 +103,16 @@
 	&_discount
 		position: relative
 		display: flex
-		padding-top: 117px
+		padding: 117px 100px 0px 100px
 		justify-content: space-around
 
 		&__text
-			min-width: 662px
-			margin-left: 350px
+			margin-right: 10px
 
 			h3
 				font-weight: 700
 				font-size: 90px
-				line-height: 104px
+				line-height: 1.2
 				color: #131111
 				// -webkit-text-stroke: 1px #BCBCBC
 				text-shadow: 1px 0px 2px #BCBCBC, 0px 1px 2px #BCBCBC, -1px 0px 2px #BCBCBC,	0px -1px 2px #BCBCBC, 
@@ -140,7 +134,6 @@
 
 		// изображение в рамке из двух кругов
 		&__circle
-
 			border: 1px solid #333333
 			border-radius: 50%
 			min-width: 736px
@@ -176,8 +169,7 @@
 		bottom: 0
 		right: 0
 
-	> div
-		border: 1px solid #d81111
+	div
 		position: absolute
 		top: 0
 		left: 0
@@ -219,6 +211,8 @@
 		background: radial-gradient(50% 50% at 50% 50%, #F64F00 0%, rgba(246, 79, 0, 0) 100%)
 		filter: blur(32px)
 
+form
+	position: relative
 // поле для ввода почты
 .form-group
 	color: #7D7D7D
